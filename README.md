@@ -11,12 +11,12 @@ Here lies my attempts at the problems posted on the [Project Euler webpage](http
 | 3                  | [Largest prime factor](https://projecteuler.net/problem=3 "Published on Friday, 2nd November 2001, 06:00 pm")               | 549264    |
 | 4                  | [Largest palindrome product](https://projecteuler.net/problem=4 "Published on Friday, 16th November 2001, 06:00 pm")        | 485013    |
 | 5                  | [Smallest multiple](https://projecteuler.net/problem=5 "Published on Friday, 30th November 2001, 06:00 pm")                 | 488637    |
-<!--
 | 6                  | [Sum square difference](https://projecteuler.net/problem=6 "Published on Friday, 14th December 2001, 06:00 pm")             | 491664    |
 | 7                  | [10001st prime](https://projecteuler.net/problem=7 "Published on Friday, 28th December 2001, 06:00 pm")                     | 419967    |
 | 8                  | [Largest product in a series](https://projecteuler.net/problem=8 "Published on Friday, 11th January 2002, 06:00 pm")        | 350641    |
 | 9                  | [Special Pythagorean triplet](https://projecteuler.net/problem=9 "Published on Friday, 25th January 2002, 06:00 pm")        | 356135    |
 | 10                 | [Summation of primes](https://projecteuler.net/problem=10 "Published on Friday, 8th February 2002, 06:00 pm")               | 325812    |
+<!--
 | 11                 | [Largest product in a grid](https://projecteuler.net/problem=11 "Published on Friday, 22nd February 2002, 06:00 pm")        | 232597    |
 | 12                 | [Highly divisible triangular number](https://projecteuler.net/problem=12 "Published on Friday, 8th March 2002, 06:00 pm")   | 219348    |
 | 13                 | [Large sum](https://projecteuler.net/problem=13 "Published on Friday, 22nd March 2002, 06:00 pm")                           | 224522    |
