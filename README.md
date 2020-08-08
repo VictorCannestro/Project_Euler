@@ -16,7 +16,6 @@ Here lies my attempts at the problems posted on the [Project Euler webpage](http
 | 8                  | [Largest product in a series](https://projecteuler.net/problem=8 "Published on Friday, 11th January 2002, 06:00 pm")        | 350641    |
 | 9                  | [Special Pythagorean triplet](https://projecteuler.net/problem=9 "Published on Friday, 25th January 2002, 06:00 pm")        | 356135    |
 | 10                 | [Summation of primes](https://projecteuler.net/problem=10 "Published on Friday, 8th February 2002, 06:00 pm")               | 325812    |
-<!--
 | 11                 | [Largest product in a grid](https://projecteuler.net/problem=11 "Published on Friday, 22nd February 2002, 06:00 pm")        | 232597    |
 | 12                 | [Highly divisible triangular number](https://projecteuler.net/problem=12 "Published on Friday, 8th March 2002, 06:00 pm")   | 219348    |
 | 13                 | [Large sum](https://projecteuler.net/problem=13 "Published on Friday, 22nd March 2002, 06:00 pm")                           | 224522    |
@@ -27,6 +26,7 @@ Here lies my attempts at the problems posted on the [Project Euler webpage](http
 | 18                 | [Maximum path sum I](https://projecteuler.net/problem=18 "Published on Friday, 31st May 2002, 06:00 pm")                    | 143133    |
 | 19                 | [Counting Sundays](https://projecteuler.net/problem=19 "Published on Friday, 14th June 2002, 06:00 pm")                     | 133016    |
 | 20                 | [Factorial digit sum](https://projecteuler.net/problem=20 "Published on Friday, 21st June 2002, 06:00 pm")                  | 196467    |
+<!--
 | 21                 | [Amicable numbers](https://projecteuler.net/problem=21 "Published on Friday, 5th July 2002, 06:00 pm")                      | 144481    |
 | 22                 | [Names scores](https://projecteuler.net/problem=22 "Published on Friday, 19th July 2002, 06:00 pm")                         | 132474    |
 | 23                 | [Non-abundant sums](https://projecteuler.net/problem=23 "Published on Friday, 2nd August 2002, 06:00 pm")                   | 102347    |
