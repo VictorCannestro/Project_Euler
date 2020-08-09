@@ -1,4 +1,4 @@
-# Project_Euler
+# Project Euler
 Here lies my attempts at the problems posted on the [Project Euler webpage](https://projecteuler.net/archives). The table bearing the problem ID and description below will be updated periodically as I work through more problems. It was generated [here](https://tabletomarkdown.com/convert-website-table-to-markdown/) and is not dynamic so the contents of the `Solved By` column will not reflect more recent postings. All problem solutions are written in Python and will be placed within the `Solutions` folder.
 
 <img align="right" width="300" height="350" src="https://projecteuler.net/images/euler_portrait.png">
@@ -26,7 +26,6 @@ Here lies my attempts at the problems posted on the [Project Euler webpage](http
 | 18                 | [Maximum path sum I](https://projecteuler.net/problem=18 "Published on Friday, 31st May 2002, 06:00 pm")                    | 143133    |
 | 19                 | [Counting Sundays](https://projecteuler.net/problem=19 "Published on Friday, 14th June 2002, 06:00 pm")                     | 133016    |
 | 20                 | [Factorial digit sum](https://projecteuler.net/problem=20 "Published on Friday, 21st June 2002, 06:00 pm")                  | 196467    |
-<!--
 | 21                 | [Amicable numbers](https://projecteuler.net/problem=21 "Published on Friday, 5th July 2002, 06:00 pm")                      | 144481    |
 | 22                 | [Names scores](https://projecteuler.net/problem=22 "Published on Friday, 19th July 2002, 06:00 pm")                         | 132474    |
 | 23                 | [Non-abundant sums](https://projecteuler.net/problem=23 "Published on Friday, 2nd August 2002, 06:00 pm")                   | 102347    |
@@ -37,6 +36,8 @@ Here lies my attempts at the problems posted on the [Project Euler webpage](http
 | 28                 | [Number spiral diagonals](https://projecteuler.net/problem=28 "Published on Friday, 11th October 2002, 06:00 pm")           | 106485    |
 | 29                 | [Distinct powers](https://projecteuler.net/problem=29 "Published on Friday, 25th October 2002, 06:00 pm")                   | 103705    |
 | 30                 | [Digit fifth powers](https://projecteuler.net/problem=30 "Published on Friday, 8th November 2002, 06:00 pm")                | 108343    |
+
+<!--
 | 31                 | [Coin sums](https://projecteuler.net/problem=31 "Published on Friday, 22nd November 2002, 06:00 pm")                        | 83434     |
 | 32                 | [Pandigital products](https://projecteuler.net/problem=32 "Published on Friday, 6th December 2002, 06:00 pm")               | 69697     |
 | 33                 | [Digit cancelling fractions](https://projecteuler.net/problem=33 "Published on Friday, 20th December 2002, 06:00 pm")       | 70165     |
@@ -109,3 +110,11 @@ Here lies my attempts at the problems posted on the [Project Euler webpage](http
 | 100 | [Arranged probability](https://projecteuler.net/problem=100 "Published on Friday, 15th July 2005, 06:00 pm")                     | 15374 |
 
 -->
+
+## Useful links:
+- [Algorithms in different languages](http://rosettacode.org/wiki/Rosetta_Code)
+- Dynamic Programming
+  - [Ref 1](https://www.cs.cmu.edu/~avrim/451f09/lectures/lect1001.pdf)
+  - [Ref 2](https://runestone.academy/runestone/books/published/pythonds/Recursion/DynamicProgramming.html)
+  - [Ref 3](https://www.educative.io/blog/python-dynamic-programming-tutorial)
+  
