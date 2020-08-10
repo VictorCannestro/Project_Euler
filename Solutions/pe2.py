@@ -26,7 +26,6 @@ while fib[-1] < tol:
     # Find evens
     if new % 2 == 0:
         evens.append(new)
-        
     i += 1
 
 fib.pop(-1)

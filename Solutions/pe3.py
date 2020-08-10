@@ -8,12 +8,6 @@
 #
 # What is the largest prime factor of the number 600851475143 ?
 
-# Initialize variables
-i = 2
-factors = []
-n = 600851475143
-temp = n
-
 def listProduct(nums):
     '''
     Args:
@@ -25,6 +19,12 @@ def listProduct(nums):
     for i in nums:
         prod *= i
     return prod 
+
+# Initialize variables
+i = 2
+factors = []
+n = 600851475143
+temp = n
 
 # Iterate until list of factors multiples to n
 while listProduct(factors) != n:
@@ -59,10 +59,6 @@ def isPrime(num):
             if num % i == 0:
                 return False
         return True
-
-
-# In[55]:
-
 
 def test1(lst):
     assert listProduct(lst) == test, "The product of the factors doens't equal the input"

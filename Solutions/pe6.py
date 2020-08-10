@@ -15,7 +15,7 @@ def sumOfSquares(n):
     return sum(i**2 for i in range(1,n+1))
 
 def squareOfSum(n):
-    return sum(range(1,n+1))**2
+    return ((n*(n-1))//2)**2
 
 n = 100
 calc = squareOfSum(n) - sumOfSquares(n)
