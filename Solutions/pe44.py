@@ -42,8 +42,8 @@
 #    32         1         23.0     23.0      0.0                      candidates.append((i, j))
 #    33         1          8.0      8.0      0.0      return candidates
 #
-# lESSON: Seaching with 'in' seems inefficient. Perhaps a search
-#         algorithm will work better for future attempt.
+# lESSON: Seaching with 'in' seems inefficient. Perhaps using a dictionary
+#         or a search algorithm will work better for future attempt
 #
 
 import numpy as np
