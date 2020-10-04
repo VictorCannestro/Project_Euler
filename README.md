@@ -36,8 +36,6 @@ Here lies my attempts at the problems posted on the [Project Euler webpage](http
 | 28                 | [Number spiral diagonals](https://projecteuler.net/problem=28 "Published on Friday, 11th October 2002, 06:00 pm")           | 106485    |
 | 29                 | [Distinct powers](https://projecteuler.net/problem=29 "Published on Friday, 25th October 2002, 06:00 pm")                   | 103705    |
 | 30                 | [Digit fifth powers](https://projecteuler.net/problem=30 "Published on Friday, 8th November 2002, 06:00 pm")                | 108343    |
-
-<!--
 | 31                 | [Coin sums](https://projecteuler.net/problem=31 "Published on Friday, 22nd November 2002, 06:00 pm")                        | 83434     |
 | 32                 | [Pandigital products](https://projecteuler.net/problem=32 "Published on Friday, 6th December 2002, 06:00 pm")               | 69697     |
 | 33                 | [Digit cancelling fractions](https://projecteuler.net/problem=33 "Published on Friday, 20th December 2002, 06:00 pm")       | 70165     |
@@ -48,6 +46,7 @@ Here lies my attempts at the problems posted on the [Project Euler webpage](http
 | 38                 | [Pandigital multiples](https://projecteuler.net/problem=38 "Published on Friday, 28th February 2003, 06:00 pm")             | 61519     |
 | 39                 | [Integer right triangles](https://projecteuler.net/problem=39 "Published on Friday, 14th March 2003, 06:00 pm")             | 71600     |
 | 40                 | [Champernowne's constant](https://projecteuler.net/problem=40 "Published on Friday, 28th March 2003, 06:00 pm")             | 78446     |
+<!--
 | 41                 | [Pandigital prime](https://projecteuler.net/problem=41 "Published on Friday, 11th April 2003, 06:00 pm")                    | 66541     |
 | 42                 | [Coded triangle numbers](https://projecteuler.net/problem=42 "Published on Friday, 25th April 2003, 06:00 pm")              | 72823     |
 | 43                 | [Sub-string divisibility](https://projecteuler.net/problem=43 "Published on Friday, 9th May 2003, 06:00 pm")                | 58271     |
