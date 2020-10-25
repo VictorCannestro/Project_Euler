@@ -34,23 +34,3 @@ def product(ts):
 n = 1000
 triplets = findTriplets(n)
 print(product(triplets))
-
-
-# In[2]:
-
-
-def test1():
-    assert findTriplets(12) == (3,4,5)
-    
-def test2():
-    assert product(findTriplets(12)) == 3*4*5
-
-test1()
-test2()
-
-
-# In[ ]:
-
-
-
-

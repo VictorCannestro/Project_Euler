@@ -33,16 +33,3 @@ def sumPrime(primes):
 
 print(sumPrime([*eratosthenes(n)]))
 
-
-# In[2]:
-
-
-def test1():
-    assert [*eratosthenes(20)] == [2,3,5,7,11,13,17,19]
-    
-def test2():
-    assert sumPrime(eratosthenes(20)) == 17+11+13+17+19
-
-test1()
-test2()
-

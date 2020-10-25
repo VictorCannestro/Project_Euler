@@ -20,13 +20,3 @@ def squareOfSum(n):
 n = 100
 calc = squareOfSum(n) - sumOfSquares(n)
 print(calc)
-
-
-# In[2]:
-
-
-def test():
-    assert squareOfSum(10) - sumOfSquares(10) == 2640
-
-test()
-

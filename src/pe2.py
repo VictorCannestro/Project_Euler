@@ -12,29 +12,25 @@
 # By considering the terms in the Fibonacci sequence whose values do not exceed four million, 
 # find the sum of the even-valued terms.
 
-# Initialize
-i = 1
-fib = [1, 2]
-evens = [2]
-tol = 4000000
+def fibSum():
+    # Initialize
+    i = 1
+    fib = [1, 2]
+    evens = [2]
+    tol = 4000000
 
-while fib[-1] < tol:
-    # Generate fibonacci number
-    new = fib[i] + fib[i-1]
-    fib.append(new)
-    
-    # Find evens
-    if new % 2 == 0:
-        evens.append(new)
-    i += 1
+    while fib[-1] < tol:
+        # Generate fibonacci number
+        new = fib[i] + fib[i-1]
+        fib.append(new)
 
-fib.pop(-1)
+        # Find evens
+        if new % 2 == 0:
+            evens.append(new)
+        i += 1
 
-print(sum(evens))
+    fib.pop(-1)
 
+    return sum(evens)
 
-# In[ ]:
-
-
-
-
+print(fibSum())

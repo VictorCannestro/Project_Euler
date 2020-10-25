@@ -47,18 +47,3 @@ def nPrimes(n):
         
 n = 10001
 print(nPrimes(n)[-1])
-
-
-# In[2]:
-
-
-# https://primes.utm.edu/lists/small/1000.txt
-def test1():
-    assert nPrimes(10)[-1] == 29
-
-def test2():
-    assert nPrimes(20)[-1] == 71
-
-test1()
-test2()
-

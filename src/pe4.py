@@ -68,12 +68,5 @@ def findPalindrome(d=3):
     
     # Filter to get palindromes pick get the biggest
     return max(z[calc])
-        
 
-def tests():
-    assert findPalindrome(1) == 9, "Not the biggest palindrome"
-    assert findPalindrome(2) == 9009, "Not the biggest palindrome"
-    
-tests()
 print(findPalindrome(3))
-

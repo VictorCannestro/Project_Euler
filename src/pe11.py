@@ -128,29 +128,3 @@ for row in range(len(arr)):          # iterate over each row vector
             prod.append(temp)
             
 print(max(prod))
-
-
-# In[2]:
-
-
-test = [(6,8),(7,9),(8,10),(9,11)]
-
-def test1(t):
-    assert t in directions(6,8,(20,20))
-    
-def test2(array, t):
-    a = int(array[t[0][0], t[0][1]]) # should be 26
-    b = int(array[t[1][0], t[1][1]]) # should be 63
-    c = int(array[t[2][0], t[2][1]]) # should be 78
-    d = int(array[t[3][0], t[3][1]]) # should be 14
-    assert a*b*c*d == 1788696
-    
-test1(test)
-test2(arr, test)
-
-
-# In[ ]:
-
-
-
-
