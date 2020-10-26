@@ -1,8 +1,6 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[1]:
-
+############################################################################################################################
+#
+# Problem 30
 # https://projecteuler.net/problem=30
 #
 # Surprisingly there are only three numbers that can be written 
@@ -17,6 +15,8 @@
 #
 # Find the sum of all the numbers that can be written as the sum 
 # of fifth powers of their digits.
+############################################################################################################################
+
 import numpy as np
 
 def digits(x):
@@ -44,20 +44,3 @@ def findPowers(n):
 calc = findPowers(5)
 print(calc)
 print(sum(calc))
-
-
-# In[5]:
-
-
-def test():
-    n = 4
-    assert sum(findPowers(n)) == 19316
-
-test()
-
-
-# In[ ]:
-
-
-
-

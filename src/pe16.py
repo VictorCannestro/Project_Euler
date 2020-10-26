@@ -1,15 +1,15 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[1]:
-
-
+############################################################################################################################
+#
+# Probelm 16
+#
 # 2**15 = 32768 and the sum of its digits is 3 + 2 + 7 + 6 + 8 = 26.
 # What is the sum of the digits of the number 2**1000?
 
 # We could use the fact that 990 / 15 = 66 with the result that
 # 2**15 = 32768, then multiply by the last 2**10 to get the 
 # answer, however python seems to be able to do this directly.
+############################################################################################################################
+
 def sumDigits(n):
     '''
     Args:
@@ -27,27 +27,3 @@ def sumDigits(n):
 power = 1000
 n = 2**power
 print(sumDigits(n))
-
-
-# In[2]:
-
-
-def test1():
-    power = 4
-    n = 2**power
-    assert sumDigits(n) == 7
-    
-def test2():
-    power = 15
-    n = 2**power
-    assert sumDigits(n) == 26
-    
-test1()
-test2()
-
-
-# In[ ]:
-
-
-
-

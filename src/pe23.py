@@ -61,6 +61,6 @@ sum_of_2_abundants = set([i+j for i in abundant for j in abundant])
 all_nums = set([*range(1,N+1)])
 
 # Filter out all the numbers that can be written as the sum of two abundant numbers
-not_sum_of_2 = list(all_nums - x)
+not_sum_of_2 = list(all_nums - sum_of_2_abundants)
 ans = sum(not_sum_of_2)
 print(ans)

@@ -48,10 +48,3 @@ def spiralDiagonals(N=3):
 sequence = spiralDiagonals(N=1001)
 ans = sum(sequence)
 print(ans) 
-
-def test1():
-    sequences = [spiralDiagonals(N=3), spiralDiagonals(N=5)]
-    ans = [sum(sequences[0]), sum(sequences[1])]
-    assert ans[0] == 25
-    assert ans[1] == 101
-test1()

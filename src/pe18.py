@@ -1,11 +1,9 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[1]:
-
-
-# By starting at the top of the triangle below and moving to adjacent 
-# numbers on the row below, the maximum total from top to bottom is 23.
+############################################################################################################################
+#
+# Problem 18
+#
+# By starting at the top of the triangle below and moving to adjacent numbers on the row below, the maximum 
+# total from top to bottom is 23.
 #
 #               3
 #              7 4
@@ -16,8 +14,8 @@
 #
 # Find the maximum total from top to bottom of the triangle below:
 #
-# NOTE: As there are only 16384 routes, it is possible to solve 
-#       this problem by trying every route.
+# NOTE: As there are only 16384 routes, it is possible to solve this problem by trying every route.
+############################################################################################################################
 
 def str2Int(lst):
     '''Converts list of str to list of ints'''
@@ -82,16 +80,4 @@ matrix = [row.split(' ') for row in matrix]
 matrix = str2Int(matrix)
 print(findPath(matrix))
 
-
-def test1():
-    test = '''3\n7 4\n2 4 6\n8 5 9 3'''.replace('\n',',').split(',')
-    test = [row.split(' ') for row in test]
-    test = str2Int(test)
-    assert findPath(test) == [3,7,4,9]
-    
-test1()
-
-
-
-
-
+#

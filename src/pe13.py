@@ -1,10 +1,9 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[2]:
-
-
+##########################################################################################
+# 
+# Problem 13
+#
 # Work out the first ten digits of the sum of the following one-hundred, 50-digit numbers.
+##########################################################################################
 
 blob = '''37107287533902102798797998220837590246510135740250
 46376937677490009712648124896970078050417018260538
@@ -107,21 +106,17 @@ blob = '''37107287533902102798797998220837590246510135740250
 20849603980134001723930671666823555245252804609722
 53503534226472524250874054075591789781264330331690'''
 
-# Separate each number with a comma
-blob = blob.replace('\n',',')
+def cleaned(text):
+    # Separate each number with a comma
+    text = text.replace('\n',',')
 
-# Convert to 1x100 matrix of integers
-matrix = [int(num) for num in blob.split(',')]
+    # Convert to 1x100 matrix of integers
+    matrix = [int(num) for num in text.split(',')]
+    
+    return matrix
 
 # Sum all the elements
-big_num = sum(matrix)
+big_num = sum(cleaned(blob))
 
 # print out first 10 digits (str format)
 print(str(big_num)[:10])
-
-
-# In[ ]:
-
-
-
-

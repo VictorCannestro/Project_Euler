@@ -25,17 +25,20 @@ with open(filename, 'r') as file:
 # Parse contents into a list of string names in alphabetical order
 names = sorted(content[0].upper().replace("\"",'').split(','))
 
-# Give each name the value of its index + 1 in the sorted list
-name_dict = {v:i+1 for i,v in enumerate(names)}
+def nameScore(names):
+    # Give each name the value of its index + 1 in the sorted list
+    name_dict = {v:i+1 for i,v in enumerate(names)}
 
-# Score the alphabet
-alphabet = string.ascii_uppercase
-scores = {v:i+1 for i,v in enumerate(alphabet)}
+    # Score the alphabet
+    alphabet = string.ascii_uppercase
+    scores = {v:i+1 for i,v in enumerate(alphabet)}
 
-# For each name, sum the index value of each of its letters in the alphabet
-scored_by_alpha = {key: sum(scores[letter] for letter in list(names[i])) for i, key in enumerate(name_dict)}
+    # For each name, sum the index value of each of its letters in the alphabet
+    scored_by_alpha = {key: sum(scores[letter] for letter in list(names[i])) for i, key in enumerate(name_dict)}
 
-# Finally, multiply by its index to get the name score
-scored_names = { k:scored_by_alpha[k]*name_dict[k] for k in scored_by_alpha.keys() }
+    # Finally, multiply by its index to get the name score
+    scored_names = { k:scored_by_alpha[k]*name_dict[k] for k in scored_by_alpha.keys() }
 
-print(sum(scored_names.values()))
+    return sum(scored_names.values()) 
+
+print(nameScore(names))

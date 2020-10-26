@@ -1,9 +1,7 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[1]:
-
-
+############################################################################################################################
+#
+# Problem 14
+#
 # The following iterative sequence is defined for the set of positive integers:
 #
 # n → n/2 (n is even)
@@ -16,6 +14,7 @@
 # Which starting number, under one million, produces the longest chain?
 #
 # NOTE: Once the chain starts the terms are allowed to go above one million.
+############################################################################################################################
 
 import numpy as np
 
@@ -54,26 +53,5 @@ for i in range(1, lim):
         
 print('The starting number', starting, 'achieves the longest sequence with length:', biggest)
 
-
-# In[2]:
-
-
 # The longest progression for any initial starting number
 # less than 10**6 is 837799, which has 524 steps
-
-def test1():
-    assert collatz(13) == 40
-    
-def test2():
-    # 13 → 40 → 20 → 10 → 5 → 16 → 8 → 4 → 2 → 1
-    assert lenCollatz(13) == 10
-    
-test1()
-test2()
-
-
-# In[ ]:
-
-
-
-

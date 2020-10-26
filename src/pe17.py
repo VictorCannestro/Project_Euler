@@ -1,9 +1,7 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[1]:
-
-
+############################################################################################################################
+#
+# Problem 17
+#
 # If the numbers 1 to 5 are written out in words: one, two, three, four, five, 
 # then there are 3 + 3 + 5 + 4 + 4 = 19 letters used in total.
 #
@@ -14,6 +12,7 @@
 # forty-two) contains 23 letters and 115 (one hundred and fifteen) contains 
 # 20 letters. The use of "and" when writing out numbers is in compliance with 
 # British usage.
+############################################################################################################################
 
 nums = {0:'', 1:'one', 2:'two', 3:'three', 4:'four', 5:'five', 6:'six', 7:'seven', 8:'eight', 9:'nine',
         10:'ten', 11:'eleven', 12:'twelve', 13:'thirteen', 14:'fourteen', 15:'fifteen', 16:'sixteen',
@@ -53,22 +52,11 @@ def countNums(n, nums):
 
 print(countNums(1000, nums))
 
-
-# In[2]:
-
-
-def test1():
-    # 3 + 3 + 5 + 4 + 4 = 19
-    assert countNums(5, nums) == 19
-    
-test1()
-
-
-# In[3]:
-
-
+############################################################################################################################
+#
 # Hideous Brute Force Approach
-
+#
+############################################################################################################################
 ones = ['one','two','three','four','five','six','seven','eight','nine']
 tens = ['ten','eleven','twelve','thirteen','fourteen','fifteen','sixteen','seventeen','eighteen','nineteen']
 tens2 = ['twenty','thirty','forty','fifty','sixty','seventy','eighty','ninety']
@@ -114,10 +102,3 @@ for h in ones:
 # count to 1000
 count += len(ones[0]+ thousand)
 print(count)
-
-
-# In[ ]:
-
-
-
-

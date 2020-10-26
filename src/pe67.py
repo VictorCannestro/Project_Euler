@@ -1,9 +1,7 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[1]:
-
-######################################################################
+############################################################################################################################
+#
+# Problem 67
+#
 # Dev's note:
 #
 # This may not be correct. Suppose the "best choice" at the start
@@ -12,7 +10,7 @@
 # the path choices in a myopic way and might not find the global 
 # solution depending on how the array is constructed.
 #
-######################################################################
+############################################################################################################################
 
 def str2Int(lst):
     '''Converts list of str to list of ints'''
