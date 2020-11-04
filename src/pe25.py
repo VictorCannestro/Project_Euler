@@ -38,5 +38,6 @@ def fiboLength(x):
         idx += 1
     return idx
 
-n = 1000
-print(fiboLength(n))
+if __name__ == "__main__":
+    n = 1000
+    print(fiboLength(n))

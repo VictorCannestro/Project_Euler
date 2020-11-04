@@ -49,7 +49,8 @@ def getAmicableParis(k):
         if n < dn and dn <= k and candidates[dn] == n:
             yield n, dn
 
-N = 10000
-pairs = [*getAmicableParis(N)]
-result = sum(p[0]+p[1] for p in pairs)
-print(result)
+if __name__ == "__main__":
+    N = 10000
+    pairs = [*getAmicableParis(N)]
+    result = sum(p[0]+p[1] for p in pairs)
+    print(result)

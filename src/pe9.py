@@ -31,6 +31,7 @@ def product(ts):
         prod *= i
     return prod
 
-n = 1000
-triplets = findTriplets(n)
-print(product(triplets))
+if __name__ == "__main__":
+    n = 1000
+    triplets = findTriplets(n)
+    print(product(triplets))

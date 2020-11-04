@@ -41,17 +41,18 @@ def lenCollatz(i):
         num = collatz(num)
         count += 1
     return count
-   
-lim = 1000000 
-biggest = 1
-starting = 1
-for i in range(1, lim):
-    length = lenCollatz(i)
-    if length > biggest:
-        biggest = length
-        starting = i
-        
-print('The starting number', starting, 'achieves the longest sequence with length:', biggest)
 
-# The longest progression for any initial starting number
-# less than 10**6 is 837799, which has 524 steps
+if __name__ == "__main__":
+    lim = 1000000 
+    biggest = 1
+    starting = 1
+    for i in range(1, lim):
+        length = lenCollatz(i)
+        if length > biggest:
+            biggest = length
+            starting = i
+
+    print('The starting number', starting, 'achieves the longest sequence with length:', biggest)
+
+    # The longest progression for any initial starting number
+    # less than 10**6 is 837799, which has 524 steps

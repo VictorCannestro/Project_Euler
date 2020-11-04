@@ -50,17 +50,18 @@ def recordSums(n):
     '''
     return {k:sumDivisors(k) for k in range(1, n+1)}
 
-# Filter to find all the abundant numbers below the analytic limit
-N = 28123
-abundant = [k for k,v in recordSums(N).items() if v > k]
+if __name__ == "__main__":
+    # Filter to find all the abundant numbers below the analytic limit
+    N = 28123
+    abundant = [k for k,v in recordSums(N).items() if v > k]
 
-# Find all the numbers that are the sum of 2 abundant numbers (below analytic limit) 
-sum_of_2_abundants = set([i+j for i in abundant for j in abundant])
+    # Find all the numbers that are the sum of 2 abundant numbers (below analytic limit) 
+    sum_of_2_abundants = set([i+j for i in abundant for j in abundant])
 
-# The set of all nums up to our analytic limit 
-all_nums = set([*range(1,N+1)])
+    # The set of all nums up to our analytic limit 
+    all_nums = set([*range(1,N+1)])
 
-# Filter out all the numbers that can be written as the sum of two abundant numbers
-not_sum_of_2 = list(all_nums - sum_of_2_abundants)
-ans = sum(not_sum_of_2)
-print(ans)
+    # Filter out all the numbers that can be written as the sum of two abundant numbers
+    not_sum_of_2 = list(all_nums - sum_of_2_abundants)
+    ans = sum(not_sum_of_2)
+    print(ans)

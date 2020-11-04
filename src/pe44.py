@@ -72,19 +72,13 @@ def findCandidates(Pn):
                     candidates.append((k, j))
     return candidates
 
-# Precompute the first n pentagonal numbers
-n = 10000
-x = np.arange(1,n)
-Pn = p(x) # array of 1st to nth pentagonal numbers
+if __name__ == "__main__":
+    # Precompute the first n pentagonal numbers
+    n = 10000
+    x = np.arange(1,n)
+    Pn = p(x) # array of 1st to nth pentagonal numbers
 
-k, j = findCandidates(Pn)[0]
+    k, j = findCandidates(Pn)[0]
 
-D = p(k+1)-p(j+1)
-print(D)
-
-
-# In[ ]:
-
-
-
-
+    D = p(k+1)-p(j+1)
+    print(D)

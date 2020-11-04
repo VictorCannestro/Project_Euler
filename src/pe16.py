@@ -23,7 +23,8 @@ def sumDigits(n):
     for i in nstr:
         sum_digits += int(i)
     return sum_digits
-      
-power = 1000
-n = 2**power
-print(sumDigits(n))
+
+if __name__ == "__main__":
+    power = 1000
+    n = 2**power
+    print(sumDigits(n))

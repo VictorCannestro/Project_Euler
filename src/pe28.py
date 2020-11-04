@@ -45,6 +45,7 @@ def spiralDiagonals(N=3):
     sequence = sorted(NE + SE[1:] + SW[1:] + NW[1:]) # ignore repeated 1s
     return sequence
 
-sequence = spiralDiagonals(N=1001)
-ans = sum(sequence)
-print(ans) 
+if __name__ == "__main__":
+    sequence = spiralDiagonals(N=1001)
+    ans = sum(sequence)
+    print(ans) 

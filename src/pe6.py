@@ -16,6 +16,8 @@ def sumOfSquares(n):
 def squareOfSum(n):
     return ((n*(n-1))//2)**2
 
-n = 100
-calc = squareOfSum(n) - sumOfSquares(n)
-print(calc)
+
+if __name__ == "__main__":
+    n = 100
+    calc = squareOfSum(n) - sumOfSquares(n)
+    print(calc)

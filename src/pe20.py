@@ -39,5 +39,6 @@ def sumDigits(x: int) -> int:
     sum_x = sum(int(i) for i in str(x))
     return sum_x
 
-n=100
-print(sumDigits(factorial(n)))
+if __name__ == "__main__":
+    n=100
+    print(sumDigits(factorial(n)))

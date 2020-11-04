@@ -54,5 +54,6 @@ def getPrimeFactors(n=600851475143):
             i += 1            # i is not a factor so check next
     
     return factors
-        
-print(getPrimeFactors()[-1])
+ 
+if __name__ == "__main__":
+    print(getPrimeFactors()[-1])

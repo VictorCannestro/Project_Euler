@@ -26,9 +26,9 @@ def eratosthenes(n):
             # Add to the list of integer multiples: [i**2,n] in steps of i 
             multiples.update(range(i*i, n+1, i))
 
-n = 2000000
 def sumPrime(primes):
     return sum(i for i in primes)
 
-print(sumPrime([*eratosthenes(n)]))
-
+if __name__ == "__main__":
+    n = 2000000
+    print(sumPrime([*eratosthenes(n)]))

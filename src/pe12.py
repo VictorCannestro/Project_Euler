@@ -76,7 +76,8 @@ def ndivisors(n):
         count = len(divisors(genTri(i)))
     return genTri(i)
 
-n = 500
-print(ndivisors(n))
+if __name__ == "__main__":
+    n = 500
+    print(ndivisors(n))
 
-# Answer: 76,576,500
+    # Answer: 76,576,500

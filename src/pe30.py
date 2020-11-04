@@ -41,6 +41,7 @@ def findPowers(n):
             nth_powres.update([i])
     return nth_powres
 
-calc = findPowers(5)
-print(calc)
-print(sum(calc))
+if __name__ == "__main__":
+    calc = findPowers(5)
+    print(calc)
+    print(sum(calc))

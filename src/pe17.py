@@ -14,13 +14,6 @@
 # British usage.
 ############################################################################################################################
 
-nums = {0:'', 1:'one', 2:'two', 3:'three', 4:'four', 5:'five', 6:'six', 7:'seven', 8:'eight', 9:'nine',
-        10:'ten', 11:'eleven', 12:'twelve', 13:'thirteen', 14:'fourteen', 15:'fifteen', 16:'sixteen',
-        17:'seventeen', 18:'eighteen', 19:'nineteen', 20:'twenty', 30:'thirty', 40:'forty', 50:'fifty',
-        60:'sixty', 70:'seventy', 80:'eighty', 90:'ninety', 100:'onehundred', 200:'twohundred', 300:'threehundred',
-        400:'fourhundred', 500:'fivehundred', 600:'sixhundred', 700:'sevenhundred', 800:'eighthundred',
-        900:'ninehundred', 1000:'onethousand'}
-
 def countNums(n, nums):
     '''Count the total number of letters of every number from 1 to n'''
     
@@ -50,55 +43,63 @@ def countNums(n, nums):
             
     return count
 
-print(countNums(1000, nums))
-
-############################################################################################################################
-#
-# Hideous Brute Force Approach
-#
-############################################################################################################################
-ones = ['one','two','three','four','five','six','seven','eight','nine']
-tens = ['ten','eleven','twelve','thirteen','fourteen','fifteen','sixteen','seventeen','eighteen','nineteen']
-tens2 = ['twenty','thirty','forty','fifty','sixty','seventy','eighty','ninety']
-hundred = 'hundred'
-thousand = 'thousand'
-
-
-count = 0
-
-# Count 1-9
-for i in ones:
-    count += len(i)
-
-# Count 10-19
-for i in tens:
-    count += len(i)
+if __name__ == "__main__":
+    nums = {0:'', 1:'one', 2:'two', 3:'three', 4:'four', 5:'five', 6:'six', 7:'seven', 8:'eight', 9:'nine',
+        10:'ten', 11:'eleven', 12:'twelve', 13:'thirteen', 14:'fourteen', 15:'fifteen', 16:'sixteen',
+        17:'seventeen', 18:'eighteen', 19:'nineteen', 20:'twenty', 30:'thirty', 40:'forty', 50:'fifty',
+        60:'sixty', 70:'seventy', 80:'eighty', 90:'ninety', 100:'onehundred', 200:'twohundred', 300:'threehundred',
+        400:'fourhundred', 500:'fivehundred', 600:'sixhundred', 700:'sevenhundred', 800:'eighthundred',
+        900:'ninehundred', 1000:'onethousand'}
     
-# Count 20-99
-for i in tens2:
-    count += len(i)
-    for j in ones:
-        count += len(i+j)
+    print(countNums(1000, nums))
 
-# Count 100-999 with the extra 'and'
-for h in ones:
-    h += hundred
-    count += len(h)
-    
+    ############################################################################################################################
+    #
+    # Hideous Brute Force Approach
+    #
+    ############################################################################################################################
+    ones = ['one','two','three','four','five','six','seven','eight','nine']
+    tens = ['ten','eleven','twelve','thirteen','fourteen','fifteen','sixteen','seventeen','eighteen','nineteen']
+    tens2 = ['twenty','thirty','forty','fifty','sixty','seventy','eighty','ninety']
+    hundred = 'hundred'
+    thousand = 'thousand'
+
+
+    count = 0
+
     # Count 1-9
     for i in ones:
-        count += len(h+'and'+i)
-        
+        count += len(i)
+
     # Count 10-19
     for i in tens:
-        count += len(h+'and'+i)
+        count += len(i)
 
     # Count 20-99
     for i in tens2:
-        count += len(h+'and'+i)
+        count += len(i)
         for j in ones:
-            count += len(h+'and'+i+j)
-            
-# count to 1000
-count += len(ones[0]+ thousand)
-print(count)
+            count += len(i+j)
+
+    # Count 100-999 with the extra 'and'
+    for h in ones:
+        h += hundred
+        count += len(h)
+
+        # Count 1-9
+        for i in ones:
+            count += len(h+'and'+i)
+
+        # Count 10-19
+        for i in tens:
+            count += len(h+'and'+i)
+
+        # Count 20-99
+        for i in tens2:
+            count += len(h+'and'+i)
+            for j in ones:
+                count += len(h+'and'+i+j)
+
+    # count to 1000
+    count += len(ones[0]+ thousand)
+    print(count)

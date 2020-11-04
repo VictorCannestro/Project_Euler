@@ -32,4 +32,5 @@ def fibSum():
 
     return sum(evens)
 
-print(fibSum())
+if __name__ == "__main__":
+    print(fibSum())

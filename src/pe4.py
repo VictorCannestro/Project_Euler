@@ -68,4 +68,5 @@ def findPalindrome(d=3):
     # Filter to get palindromes pick get the biggest
     return max(z[calc])
 
-print(findPalindrome(3))
+if __name__ == "__main__":
+    print(findPalindrome(3))

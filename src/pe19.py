@@ -23,11 +23,6 @@ import datetime as dt
 # https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.date_range.html
 import pandas as pd
 
-# 1 Jan 1901 
-start = dt.date(1901, 1, 1)
-# 31 Dec 2000
-end = dt.date(2000, 12, 31)
-
 def find1stSundays(start, end):
     # Define the range of dates to consider
     search_space = pd.date_range(start, end)
@@ -43,4 +38,9 @@ def find1stSundays(start, end):
     
     return calc
 
-print(find1stSundays(start, end))
+if __name__ == "__main__":
+    # 1 Jan 1901 
+    start = dt.date(1901, 1, 1)
+    # 31 Dec 2000
+    end = dt.date(2000, 12, 31)    
+    print(find1stSundays(start, end))

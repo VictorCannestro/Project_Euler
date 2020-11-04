@@ -34,10 +34,10 @@ def findCombos(a: np.array, b: np.array) -> set:
         combos.update(powers(i,b))
     return combos
 
+if __name__ == "__main__":
+    n = 100
+    a = np.arange(2,n+1)
+    b = np.arange(2,n+1)
+    combos = findCombos(a, b)
 
-n = 100
-a = np.arange(2,n+1)
-b = np.arange(2,n+1)
-combos = findCombos(a, b)
-
-print(len(combos))
+    print(len(combos))

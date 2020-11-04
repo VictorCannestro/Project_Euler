@@ -54,29 +54,19 @@ def findPath(matrix):
         
     return path
                 
-    
-with open('data/p067_triangle.txt') as file:
-    tri = file.read()
+if __name__ == "__main__":    
+    with open('data/p067_triangle.txt') as file:
+        tri = file.read()
 
-matrix = tri.replace('\n',',').split(',')
-matrix = [row.split(' ') for row in matrix]
-matrix.pop(-1)
-matrix = str2Int(matrix)
-print(findPath(matrix))
+    matrix = tri.replace('\n',',').split(',')
+    matrix = [row.split(' ') for row in matrix]
+    matrix.pop(-1)
+    matrix = str2Int(matrix)
+    print(findPath(matrix))
 
-# My answer:
-# [59, 73, 52, 53, 87, 95, 90, 30, 84, 46, 56, 78, 45, 87, 51, 66, 76, 12, 70, 66, 89, 63, 
-# 87, 79, 78, 61, 55, 98, 60, 77, 71, 99, 92, 49, 56, 89, 61, 68, 60, 94, 73, 44, 99, 92, 
-# 77, 98, 67, 54, 68, 94, 64, 83, 50, 73, 44, 73, 80, 90, 87, 60, 64, 86, 93, 86, 64, 76, 
-# 54, 30, 83, 42, 34, 69, 85, 67, 74, 92, 81, 78, 93, 88, 89, 60, 91, 91, 89, 91, 98, 87, 
-# 52, 96, 96, 71, 51, 24, 11, 93, 60, 66, 85, 81]
-
-def test1():
-    test = '''3\n7 4\n2 4 6\n8 5 9 3'''.replace('\n',',').split(',')
-    test = [row.split(' ') for row in test]
-    test = str2Int(test)
-    assert findPath(test) == [3,7,4,9]
-    
-test1()
-
-
+    # My answer:
+    # [59, 73, 52, 53, 87, 95, 90, 30, 84, 46, 56, 78, 45, 87, 51, 66, 76, 12, 70, 66, 89, 63, 
+    # 87, 79, 78, 61, 55, 98, 60, 77, 71, 99, 92, 49, 56, 89, 61, 68, 60, 94, 73, 44, 99, 92, 
+    # 77, 98, 67, 54, 68, 94, 64, 83, 50, 73, 44, 73, 80, 90, 87, 60, 64, 86, 93, 86, 64, 76, 
+    # 54, 30, 83, 42, 34, 69, 85, 67, 74, 92, 81, 78, 93, 88, 89, 60, 91, 91, 89, 91, 98, 87, 
+    # 52, 96, 96, 71, 51, 24, 11, 93, 60, 66, 85, 81]

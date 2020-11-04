@@ -16,15 +16,6 @@
 # https://docs.python.org/3/library/string.html
 import string
 
-filename = '../data/p022_names.txt'
-
-# Open the file and read the contents
-with open(filename, 'r') as file:
-    content = file.readlines()
-
-# Parse contents into a list of string names in alphabetical order
-names = sorted(content[0].upper().replace("\"",'').split(','))
-
 def nameScore(names):
     # Give each name the value of its index + 1 in the sorted list
     name_dict = {v:i+1 for i,v in enumerate(names)}
@@ -41,4 +32,14 @@ def nameScore(names):
 
     return sum(scored_names.values()) 
 
-print(nameScore(names))
+if __name__ == "__main__":
+    filename = '../data/p022_names.txt'
+
+    # Open the file and read the contents
+    with open(filename, 'r') as file:
+        content = file.readlines()
+
+    # Parse contents into a list of string names in alphabetical order
+    names = sorted(content[0].upper().replace("\"",'').split(','))
+
+    print(nameScore(names))

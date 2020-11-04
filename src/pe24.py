@@ -21,15 +21,6 @@ from itertools import permutations
 # to the order of the input iterable. So, if the input iterable is sorted, 
 # the combination tuples will be produced in sorted order.
 
-# Elements are treated as unique based on their position, not on their 
-# value. So if the input elements are unique, there will be no repeat 
-# values in each permutation
-calc = permutations(range(10), 10)
-
-# Turn iterator into a list and observe the 1,000,000th value
-vals = [*calc]
-ans = vals[999999]
-
 def tuple2Num(tup):
     '''
     Args:
@@ -43,5 +34,14 @@ def tuple2Num(tup):
     '''
     return sum( tup[-(i+1)] * 10**i for i in range(len(tup)) )
     
-print(ans)
-print(tuple2Num(ans))
+if __name__ == "__main__":
+    # Elements are treated as unique based on their position, not on their 
+    # value. So if the input elements are unique, there will be no repeat 
+    # values in each permutation
+    calc = permutations(range(10), 10)
+
+    # Turn iterator into a list and observe the 1,000,000th value
+    vals = [*calc]
+    ans = vals[999999]
+    print(ans)
+    print(tuple2Num(ans))

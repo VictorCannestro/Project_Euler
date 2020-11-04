@@ -42,6 +42,7 @@ def nPrimes(n):
             primes.append(i)
         i += 1
     return primes
-        
-n = 10001
-print(nPrimes(n)[-1])
+
+if __name__ == "__main__":        
+    n = 10001
+    print(nPrimes(n)[-1])

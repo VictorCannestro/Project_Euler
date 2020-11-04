@@ -30,4 +30,5 @@ def pathChoices(n):
     '''
     return factorial(2*n) // (factorial(n)*factorial(n))
 
-print(pathChoices(20))
+if __name__ == "__main__":
+    print(pathChoices(20))

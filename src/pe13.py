@@ -5,7 +5,17 @@
 # Work out the first ten digits of the sum of the following one-hundred, 50-digit numbers.
 ##########################################################################################
 
-blob = '''37107287533902102798797998220837590246510135740250
+def cleaned(text):
+    # Separate each number with a comma
+    text = text.replace('\n',',')
+
+    # Convert to 1x100 matrix of integers
+    matrix = [int(num) for num in text.split(',')]
+    
+    return matrix
+
+if __name__ == "__main__":
+    blob = '''37107287533902102798797998220837590246510135740250
 46376937677490009712648124896970078050417018260538
 74324986199524741059474233309513058123726617309629
 91942213363574161572522430563301811072406154908250
@@ -105,18 +115,8 @@ blob = '''37107287533902102798797998220837590246510135740250
 72107838435069186155435662884062257473692284509516
 20849603980134001723930671666823555245252804609722
 53503534226472524250874054075591789781264330331690'''
+    # Sum all the elements
+    big_num = sum(cleaned(blob))
 
-def cleaned(text):
-    # Separate each number with a comma
-    text = text.replace('\n',',')
-
-    # Convert to 1x100 matrix of integers
-    matrix = [int(num) for num in text.split(',')]
-    
-    return matrix
-
-# Sum all the elements
-big_num = sum(cleaned(blob))
-
-# print out first 10 digits (str format)
-print(str(big_num)[:10])
+    # print out first 10 digits (str format)
+    print(str(big_num)[:10])

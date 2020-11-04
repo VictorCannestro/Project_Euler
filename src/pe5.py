@@ -29,5 +29,5 @@ def smallestMult(d):
         generator = (smallest % i == 0 for i in range(1, d+1))
     return smallest
 
-print(smallestMult(20))
-
+if __name__ == "__main__":
+    print(smallestMult(20))
