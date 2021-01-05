@@ -1,4 +1,3 @@
-import pytest
 from src.pe23 import recordSums 
 
 def test_1():
@@ -13,6 +12,6 @@ def test_1():
     all_nums = set([*range(1,N+1)])
 
     # Filter out all the numbers that can be written as the sum of two abundant numbers
-    not_sum_of_2 = list(all_nums - x)
+    not_sum_of_2 = list(all_nums - sum_of_2_abundants)
     ans = sum(not_sum_of_2)
     assert ans == 4179871

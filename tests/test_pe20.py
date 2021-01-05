@@ -1,4 +1,3 @@
-import pytest 
 from src.pe20 import sumDigits, factorial
 
 

@@ -1,4 +1,3 @@
-import pytest
 from src.pe25 import fiboLength
 
 def test_1():

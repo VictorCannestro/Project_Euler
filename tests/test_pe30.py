@@ -1,4 +1,3 @@
-import pytest
 from src.pe30 import findPowers
 
 def test():

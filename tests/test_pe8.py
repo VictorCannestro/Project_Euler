@@ -1,4 +1,3 @@
-import pytest
 from src.pe8 import adjacentProduct
 
 

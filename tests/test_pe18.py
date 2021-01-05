@@ -1,4 +1,3 @@
-import pytest
 from src.pe18 import str2Int, findPath
 
 def test_1():

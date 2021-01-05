@@ -1,4 +1,3 @@
-import pytest 
 from src.pe10 import eratosthenes, sumPrime
 
 def test_1():

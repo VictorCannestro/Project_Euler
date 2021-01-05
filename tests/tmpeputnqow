@@ -1,5 +1,6 @@
-from scr.pe2 import listProduct, isPrime, getPrimeFactors
-
+from scr.pe2 import listProduct
+from scr.pe2 import isPrime
+from scr.pe2 import getPrimeFactors
 
 def test_1():
     lst = getPrimeFactors()

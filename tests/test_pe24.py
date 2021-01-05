@@ -1,4 +1,3 @@
-import pytest
 from itertools import permutations
 
 def test_1():

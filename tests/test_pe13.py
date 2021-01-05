@@ -1,4 +1,3 @@
-import pytest
 from src.pe13 import cleaned
 
 def test_1():

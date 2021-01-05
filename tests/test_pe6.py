@@ -1,4 +1,3 @@
-import pytest
 from src.pe6 import squareOfSum, sumOfSquares
 
 def test_1():

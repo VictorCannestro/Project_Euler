@@ -1,4 +1,3 @@
-import pytest 
 from src.pe22 import nameScore
 
 def test_1():

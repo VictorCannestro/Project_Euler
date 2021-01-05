@@ -1,4 +1,3 @@
-import pytest
 from src.pe15 import pathChoices
 
 

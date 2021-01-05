@@ -1,4 +1,3 @@
-import pytest
 from src.pe12 import genTri, divisors, ndivisors
 
 def test_1():

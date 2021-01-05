@@ -1,4 +1,3 @@
-import pytest
 from src.pe17 import countNums
 
 

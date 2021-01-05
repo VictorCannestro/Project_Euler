@@ -1,4 +1,3 @@
-import pytest
 from src.pe7 import nPrimes
 
 # https://primes.utm.edu/lists/small/1000.txt

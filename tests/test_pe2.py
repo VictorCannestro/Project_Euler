@@ -1,4 +1,3 @@
-import pytest
 from src.pe2 import fibSum
 
 def test_1():

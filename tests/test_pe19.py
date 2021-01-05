@@ -1,4 +1,3 @@
-import pytest
 import datetime as dt
 from src.pe19 import find1stSundays
 

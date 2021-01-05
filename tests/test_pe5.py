@@ -1,4 +1,3 @@
-import pytest
 from src.pe5 import smallestMult
 
 def test_1():

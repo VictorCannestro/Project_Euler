@@ -1,4 +1,3 @@
-import pytest
 from src.pe4 import findPalindrome
 
 def test_1():

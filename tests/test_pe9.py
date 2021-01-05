@@ -1,4 +1,3 @@
-import pytest
 from src.pe9 import findTriplets, product
 
 

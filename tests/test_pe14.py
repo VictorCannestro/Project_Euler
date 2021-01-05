@@ -1,4 +1,3 @@
-import pytest
 from src.pe14 import collatz, lenCollatz
 
 def test_1():
