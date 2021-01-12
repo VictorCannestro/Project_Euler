@@ -1,7 +1,7 @@
 from src.pe22 import nameScore
 
 def test_1():
-    filename = '../data/p022_names.txt'
+    filename = 'data/p022_names.txt'
 
     # Open the file and read the contents
     with open(filename, 'r') as file:

@@ -14,10 +14,10 @@ def sumOfSquares(n):
     return sum(i**2 for i in range(1,n+1))
 
 def squareOfSum(n):
-    return ((n*(n-1))//2)**2
+    return ((n*(n+1))//2)**2
 
 
 if __name__ == "__main__":
-    n = 100
+    n = 10
     calc = squareOfSum(n) - sumOfSquares(n)
     print(calc)

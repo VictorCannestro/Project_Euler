@@ -16,28 +16,30 @@ from functools import lru_cache
 
 @lru_cache()
 def fibo(n):
-    '''Returns the nth fibonacci number'''
+    '''Returns the nth fibonacci number using a memoization wrapper'''
     if n < 2:
         return n
     return fibo(n-2) + fibo(n-1)
 
 def fiboLength(x):
     '''
-    Args:
-        x (int): the desired length of the 
-                 fibonacci number
-    
-    Return:
-        (int): the index of the fibonacci 
-               number of length x 
+    Parameters
+    ----------
+    x : int
+        the desired length of the fibonacci number.
+
+    Returns
+    -------
+    idx : int
+        the index of the fibonacci number of length x.
     '''
     idx = 1
     fib = 1
     while len(str(fib)) < x:
         fib = fibo(idx)
         idx += 1
-    return idx
+    return idx - 1
 
 if __name__ == "__main__":
-    n = 1000
-    print(fiboLength(n))
+    digits = 2
+    print(fiboLength(digits))

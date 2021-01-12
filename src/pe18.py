@@ -16,48 +16,78 @@
 #
 # NOTE: As there are only 16384 routes, it is possible to solve this problem by trying every route.
 ############################################################################################################################
+import re 
 
-def str2Int(lst):
+def str2List(string):
+    '''
+    Parameters
+    ----------
+    string : str
+        A triangle of integers with rows separated by newlines.
+
+    Returns
+    -------
+    cleaned : list
+        Converts the triangle to nested list of strings representing integers.
+        Example:
+        >>s = '75\n    95 64\n    17 47 82'
+        >>str2List(s)
+        [['75'],['95','64'],['17','47','82']]
+    '''
+    temp = string.replace('\n',',')
+    rgx = r" {2,}"
+    temp = re.sub(rgx, '', temp).split(',')    
+    cleaned = [row.split(' ') for row in temp]
+    return cleaned
+
+
+def str2IntElements(lst):
     '''Converts list of str to list of ints'''
     for i in range(len(lst)):
         for j in range(len(lst[i])):
             lst[i][j] = int(lst[i][j])
     return lst
 
+
 def findPath(matrix):
     '''
-    Args:
-        matrix: list of lists of ints
-        
-    Returns:
-        The path of the yielding the maximum total from top
-        to bottom of the triangle matrix input
+    Parameters
+    ----------
+    matrix : list
+        list of lists of ints.
+
+    Returns
+    -------
+    path : list
+        The Greedy solution path yielding a maximum total from top to bottom 
+        of the triangle matrix input. May NOT be the global maximum.
     '''
     # set the initial starting points
-    path = [matrix[0][0]]
-    
+    path = [matrix[0][0]]  
     # Iterate over each row in matrix, save for the first
     for i in range(1,len(matrix)):
         # record the index of the previous path max
-        idx = matrix[i-1].index(path[i-1])
-        
+        idx = matrix[i-1].index(path[i-1])     
         # List indices of the adjacent elements
-        valid_idxs = list(set([abs(idx-1), idx, idx+1]))
-        
+        valid_idxs = list(set([abs(idx-1), idx, idx+1]))     
         # If a candidate is outside the bounds, drop it
         if valid_idxs[-1] >= len(matrix[i]):
-            vaild_idxs.pop(-1)
-        
+            vaild_idxs.pop(-1)   
         choices = []
         for k in valid_idxs:
             # Record values of the 2-3 candidates
-            choices.append(matrix[i][k])
-        
+            choices.append(matrix[i][k])      
         # Select the largest path element candidate
         v = max(choices)
         path.append(v)
         
     return path
+
+
+def findPathDynamic(matrix):
+    ''''Uses dynamic programming to efficiently find the solution'''
+    pass
+    
                  
 if __name__ == "__main__":
     tri ='''75
@@ -76,9 +106,5 @@ if __name__ == "__main__":
     63 66 04 68 89 53 67 30 73 16 69 87 40 31
     04 62 98 27 23 09 70 98 73 93 38 53 60 04 23'''
 
-    matrix = tri.replace('\n',',').split(',')
-    matrix = [row.split(' ') for row in matrix]
-    matrix = str2Int(matrix)
+    matrix = str2IntElements(str2List(tri))
     print(findPath(matrix))
-
-    #

@@ -1,4 +1,4 @@
-from scr.pe2 import listProduct, isPrime, getPrimeFactors
+from src.pe3 import listProduct, isPrime, getPrimeFactors
 
 
 def test_1():
