@@ -1,4 +1,6 @@
 # Project Euler
+![](https://travis-ci.com/VictorCannestro/Project_Euler.svg?branch=master)
+
 Here lies my attempts at the problems posted on the [Project Euler webpage](https://projecteuler.net/archives). The table bearing the problem ID and description below will be updated periodically as I work through more problems. It was generated [here](https://tabletomarkdown.com/convert-website-table-to-markdown/) and is not dynamic so the contents of the `Solved By` column will not reflect more recent postings. All problem solutions are written in Python and will be placed within the `src` folder.
 
 <img align="right" width="300" height="350" src="https://projecteuler.net/images/euler_portrait.png">
