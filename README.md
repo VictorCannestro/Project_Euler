@@ -5,7 +5,7 @@
 <p>
   Here lies my attempts at the problems posted on https://projecteuler.net/archives. The table bearing the problem ID and description below will be updated periodically as I work through more problems. It is not dynamic so the contents of the "Solved By" column will not reflect more recent postings. All problem solutions are written in Python and will be placed within the "src" folder.
 </p>
-<img align="right" width="300" height="350" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Leonhard_Euler_-_edit1.jpg/640px-Leonhard_Euler_-_edit1.jpg">
+<img align="left" width="300" height="350" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Leonhard_Euler_-_edit1.jpg/640px-Leonhard_Euler_-_edit1.jpg">
 
 
 |**ID** | Description / Title                                                                                                         | Solved By |  Solution | Tests |
