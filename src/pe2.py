@@ -9,28 +9,60 @@
 #
 # By considering the terms in the Fibonacci sequence whose values do not exceed four million, 
 # find the sum of the even-valued terms.
+#
+# Ans: 4613732
 ############################################################################################################################
 
-def fibSum():
-    # Initialize
+
+def generateFibs(limit=60) -> int:
+    '''
+    Parameters
+    ----------
+    limit : int, optional
+        The limit the terms in the Fibonacci sequence can not exceed. The default is 10.
+
+    Yields
+    ------
+    i : int
+        The next term in the Fibonacci sequence.
+    '''
+    i, fib = 0, 1
+    while fib < limit:
+        yield fib
+        i, fib = fib, i + fib    
+    
+        
+def evenFibSum(limit=60) -> int:
+    '''
+    Returns
+    -------
+    int
+         The sum of the even-valued terms of the Fibonacci sequence.
+    '''
+    return sum(fib for fib in generateFibs(limit) if fib % 2 == 0)
+
+
+def fibSum(tol=4000000) -> int:
+    '''
+    Returns
+    -------
+    int
+         The sum of the even-valued terms of the Fibonacci sequence.
+    '''
     i = 1
     fib = [1, 2]
     evens = [2]
-    tol = 4000000
-
     while fib[-1] < tol:
-        # Generate fibonacci number
-        new = fib[i] + fib[i-1]
+        new = fib[i] + fib[i-1] # Generate fibonacci number
         fib.append(new)
-
-        # Find evens
         if new % 2 == 0:
             evens.append(new)
-        i += 1
-
-    fib.pop(-1)
-
+        i += 1    
+    fib.pop(-1) # Remove the last element which is too big
     return sum(evens)
+    
 
 if __name__ == "__main__":
+    print(*generateFibs(60))
+    print(evenFibSum())
     print(fibSum())

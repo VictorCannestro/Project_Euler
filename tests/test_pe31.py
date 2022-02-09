@@ -4,18 +4,26 @@ Created on Thu Jan  7 18:29:19 2021
 
 @author: Victor Cannestro
 """
-
+import pytest
 from src.pe31 import currencyCombos
 
-
+@pytest.mark.skip()
 def test_one():
-    pass
-    #assert currencyCombos(5) == 4
-    
+    calc = currencyCombos(5)
+    ans = 4
+    message = f"Expected {ans} but got {calc}"
+    assert calc == ans, message 
+
+@pytest.mark.skip()  
 def test_two():
-    pass
-    #assert currencyCombos(10) == 10
-    
+    calc = currencyCombos(10)
+    ans = 10
+    message = f"Expected {ans} but got {calc}"
+    assert calc == ans, message
+
+@pytest.mark.skip()
 def test_finalAns():
-    pass
-    #assert currencyCombos(200) == 73682
+    calc = currencyCombos(200)
+    ans = 73682
+    message = f"Expected {ans} but got {calc}"
+    assert calc == ans, message 
