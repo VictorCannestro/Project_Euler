@@ -9,6 +9,6 @@ before_install:
   - pip install pytest-cov
   - pip install coveralls
 script: 
-  - pytest --cov=Project_Euler/ 
+  - pytest --cov=src/ 
 after_success:
   - coveralls --verbose
