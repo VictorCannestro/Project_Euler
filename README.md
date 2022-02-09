@@ -1,5 +1,5 @@
-
 ![](https://travis-ci.com/VictorCannestro/Project_Euler.svg?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/VictorCannestro/Project_Euler/badge.svg?branch=master)]
 
 <img align="left" width="150" height="175" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Leonhard_Euler_-_edit1.jpg/640px-Leonhard_Euler_-_edit1.jpg">
 <img align="center"  src="https://user-images.githubusercontent.com/7690993/152918004-8d21e97c-e4d6-4e7a-9fa9-fd104757af82.png">

@@ -8,7 +8,8 @@ before_install:
   - pip install pandas
   - pip install codecov
   - pip install pytest-cov
+  - pip install coveralls
 script: 
-  - pytest --cov=./ --cov-report=xml
+ - coverage run --source=mypkg -m pytest tests/
 after_success:
-  - codecov 
+  - coveralls
