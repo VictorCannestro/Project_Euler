@@ -6,10 +6,9 @@ before_install:
   - pip install -U pip 
   - pip install -U pytest
   - pip install pandas
-  - pip install codecov
   - pip install pytest-cov
   - pip install coveralls
 script: 
-  - coverage run --source=coveralls -m pytest tests/
+  - coverage run --source=Project_Euler/ -m pytest tests/
 after_success:
   - coveralls --verbose
