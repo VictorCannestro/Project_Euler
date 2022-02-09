@@ -1,4 +1,4 @@
-from setuptools import setup
+from setuptools import setup, find_packages
 
 INSTALL_REQUIRES = [
     'numpy',
@@ -16,9 +16,9 @@ setup(
     name='Project Euler',
     author='Victor Cannestro',
     description='Solutions to problems from the Project Euler webpage',
-    long_description=README,
+    long_description='README.md',
     url='https://github.com/VictorCannestro/Project_Euler',
-    packages=setuptools.find_packages(),
+    packages=find_packages(),
     include_package_data=True,
     python_requires=">=3.5",
     install_requires=INSTALL_REQUIRES,

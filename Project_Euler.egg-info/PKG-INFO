@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: Project-Euler
+Version: 0.0.0
+Summary: Solutions to problems from the Project Euler webpage
+Home-page: https://github.com/VictorCannestro/Project_Euler
+Author: Victor Cannestro
+License: UNKNOWN
+Description: README.md
+Platform: UNKNOWN
+Requires-Python: >=3.5
+Provides-Extra: test
