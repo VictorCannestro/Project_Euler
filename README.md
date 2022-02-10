@@ -1,7 +1,7 @@
 ![](https://travis-ci.com/VictorCannestro/Project_Euler.svg?branch=master)
-<a href='https://coveralls.io/github/VictorCannestro/Project_Euler'>
-  <img src='https://coveralls.io/repos/github/VictorCannestro/Project_Euler/badge.svg' alt='Coverage Status' />
-</a>
+[![Coverage Status](https://coveralls.io/repos/github/VictorCannestro/Project_Euler/badge.png?branch=master)](https://coveralls.io/github/VictorCannestro/Project_Euler?branch=master)
+<a href="https://lgtm.com/projects/g/VictorCannestro/Project_Euler/context:python"><img alt="Language grade: Python" src="https://img.shields.io/lgtm/grade/python/g/VictorCannestro/Project_Euler.svg?logo=lgtm&logoWidth=18"/></a>
+<a href="https://lgtm.com/projects/g/VictorCannestro/Project_Euler/alerts/"><img alt="Total alerts" src="https://img.shields.io/lgtm/alerts/g/VictorCannestro/Project_Euler.svg?logo=lgtm&logoWidth=18"/></a>
 
 <img align="left" width="150" height="175" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Leonhard_Euler_-_edit1.jpg/640px-Leonhard_Euler_-_edit1.jpg">
 <img align="center"  src="https://user-images.githubusercontent.com/7690993/152918004-8d21e97c-e4d6-4e7a-9fa9-fd104757af82.png">
