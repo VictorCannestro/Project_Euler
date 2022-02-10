@@ -1,25 +1,29 @@
-from src.pe5 import smallestMult
+from src.pe5 import bruteForce
+import pytest 
 
-def test_1():
-    feedback = "Not the smallest number that can be divided by each of the numbers from 1 to 1 without any remainder"
-    assert smallestMult(1) == 1, feedback
 
-def test_2():
-    feedback = "Not the smallest number that can be divided by each of the numbers from 1 to 2 without any remainder"
-    assert smallestMult(2) == 2, feedback
+class TestSmallestMult(object):
+    xs = [1, 2, 3, 4, 5, 10]
+    answers = [1, 2, 6, 12, 60, 2520]
     
-def test_3():
-    feedback = "Not the smallest number that can be divided by each of the numbers from 1 to 3 without any remainder"
-    assert smallestMult(3) == 6, feedback
+    def test_type(self):
+        calc = type(bruteForce(1))
+        ans = int
+        assert calc == ans, f"Expected {ans} but got {calc}"
+        
+    @pytest.mark.xfail
+    def test_negative(self):
+        with pytest.raises(ValueError) as exception_info: # store the exception
+            fail = bruteForce(-1)
+        assert exception_info.match("Input must be non-negative")
     
-def test_4():
-    feedback = "Not the smallest number that can be divided by each of the numbers from 1 to 4 without any remainder"
-    assert smallestMult(4) == 12, feedback
-
-def test_5():
-    feedback = "Not the smallest number that can be divided by each of the numbers from 1 to 5 without any remainder"
-    assert smallestMult(5) == 60, feedback
-    
-def test_10():
-    feedback = "Not the smallest number that can be divided by each of the numbers from 1 to 10 without any remainder"
-    assert smallestMult(10) == 2520, feedback
+    @pytest.mark.parametrize("x, ans", zip(xs, answers))
+    def test_standard(self, x, ans):
+        message = f"Not the smallest number that can be divided by each of the numbers from 1 to {x} without any remainder"
+        assert bruteForce(1) == 1, message
+        
+    def test_ans(self):
+        calc = bruteForce(20)
+        ans = 232792560
+        message = f"Expected {ans} but got {calc}"
+        assert ans == calc, message

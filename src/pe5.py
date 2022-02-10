@@ -7,9 +7,11 @@
 #
 # What is the smallest positive number that is evenly divisible 
 # by all of the numbers from 1 to 20?
+#
+# Ans: 232792560
 ############################################################################################################################
 
-def smallestMult(d):
+def bruteForce(d: int) -> int:
     '''
     Args:
         d (int > 0): the upper bound of the consecutive divisors
@@ -18,16 +20,20 @@ def smallestMult(d):
         (int): the smallest positive number that is evenly divisible 
                by all of the numbers from 1 to d
     '''
-    # Initialize the smallest
-    smallest = 1
+    if d < 1:
+        raise ValueError("Must input a positive integer.")
+    elif d == 1:
+        return 1
+    smallest = d*(d-1)
     # A generator comprehension that checks if smallest divides the numbers 
     # from 1 to d without any remainder. Contains boolean values. 
-    generator = (smallest % i == 0 for i in range(1, d+1))
-    
-    while sum(generator) != d:
+    while sum(smallest % i == 0 for i in range(1, d+1)) != d:
         smallest += 1
-        generator = (smallest % i == 0 for i in range(1, d+1))
     return smallest
 
+#def smallestEvenlyDivisible(d: int) -> int:
+
+
+
 if __name__ == "__main__":
-    print(smallestMult(20))
+    print(bruteForce(20))

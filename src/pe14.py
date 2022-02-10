@@ -14,19 +14,23 @@
 # Which starting number, under one million, produces the longest chain?
 #
 # NOTE: Once the chain starts the terms are allowed to go above one million.
+#
+# Ans: longest progression for any initial starting number less than 10**6 is 
+#      837799, which has 524 steps.
 ############################################################################################################################
 
-import numpy as np
-
-def collatz(n):
+def collatz(n: int) -> int:
     '''Generate the next number in the sequence'''
-    if n % 2 ==0:
+    if n < 1:
+        raise ValueError("The sequence is only defined for the set of positive integers")
+    elif n % 2 ==0:
         n //= 2
     else:
         n = 3*n + 1
     return n
 
-def lenCollatz(i):
+
+def lenCollatz(i: int) -> int:
     '''
     Args:
         i (int): the starting number of a collatz sequence
@@ -35,24 +39,24 @@ def lenCollatz(i):
         count (int > 0): the length of the collatz sequence
     '''
     num = i
-    count = 1
+    count = 0
     # Iterate until the sequence reaches 1
     while num != 1:
         num = collatz(num)
         count += 1
     return count
 
-if __name__ == "__main__":
-    lim = 1000000 
-    biggest = 1
-    starting = 1
-    for i in range(1, lim):
+
+def runSimulation(start: int=1, end: int=1000000) -> int:
+    start_of_longest, longest_length = 1, 1
+    for i in range(start, end):
         length = lenCollatz(i)
-        if length > biggest:
-            biggest = length
-            starting = i
+        if length > longest_length:
+            longest_length = length
+            start_of_longest = i
+    print(f"The starting number {start_of_longest}, achieves the longest sequence with length: {longest_length}")
+    return start_of_longest
+    
 
-    print('The starting number', starting, 'achieves the longest sequence with length:', biggest)
-
-    # The longest progression for any initial starting number
-    # less than 10**6 is 837799, which has 524 steps
+if __name__ == "__main__":
+    print(runSimulation(1, 15))

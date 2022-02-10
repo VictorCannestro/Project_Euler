@@ -20,7 +20,7 @@
 @author: Victor Cannestro
 """
 
-def currencyCombos(targetAmount : int) -> int:
+def currencyCombos(targetAmount : int):
     '''
     Parameters
     ----------
@@ -32,10 +32,10 @@ def currencyCombos(targetAmount : int) -> int:
     int
         DESCRIPTION.
     '''
-    COINS = (1,2,5,10,20,50,100,200)
-    combos = 0
+    #COINS = (1,2,5,10,20,50,100,200)
+    #combos = 0
     
-    return len(combos)
+    pass #return len(combos)
 
 
 if __name__ == "__main__":
