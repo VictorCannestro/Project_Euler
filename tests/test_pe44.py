@@ -8,7 +8,7 @@ class TestP(object):
         ans = np.asarray([1, 5, 12, 22, 35, 51, 70, 92, 117, 145])
         xs = np.arange(1,11)
         calc = p(xs)
-        check = [xs[i] == ans[i] for i in range(0,10)]
+        check = [calc[i] == ans[i] for i in range(0,10)]
         message = f"Expected {ans}, but got {calc}"
         assert sum(check) == len(ans), message 
         

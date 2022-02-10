@@ -53,6 +53,8 @@ if __name__ == "__main__":
     
     print(countNums(1000, nums))
 
+
+    '''
     ############################################################################################################################
     #
     # Hideous Brute Force Approach
@@ -103,3 +105,4 @@ if __name__ == "__main__":
     # count to 1000
     count += len(ones[0]+ thousand)
     print(count)
+    '''
