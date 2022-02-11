@@ -1,6 +1,7 @@
 import numpy as np
 from src.pe21 import propDivisors, d
 
+
 def test_1():
     tol = 10e-5
     calc = propDivisors(284)

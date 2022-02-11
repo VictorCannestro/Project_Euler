@@ -13,6 +13,7 @@
 ############################################################################################################################
 import numpy as np
 
+
 def d(n):
     '''Amicable number: the sum of the proper divisors of n'''
     return np.sum(propDivisors(n))
@@ -48,6 +49,7 @@ def getAmicableParis(k):
         # Check the conditions for an amicable pair
         if n < dn and dn <= k and candidates[dn] == n:
             yield n, dn
+            
 
 if __name__ == "__main__":
     N = 10000

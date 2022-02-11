@@ -12,6 +12,8 @@
 # forty-two) contains 23 letters and 115 (one hundred and fifteen) contains 
 # 20 letters. The use of "and" when writing out numbers is in compliance with 
 # British usage.
+#
+# Ans: 21124 
 ############################################################################################################################
 
 def countNums(n, nums):
@@ -23,25 +25,22 @@ def countNums(n, nums):
         # Count all the keys
         if i in nums.keys():
             count += len(nums[i])
-
         elif i in range(21,100) and i not in nums.keys():
             # Get first and second digits
             w = nums[(i//10) * 10] + nums[i%10]
             count += len(w)
-
         elif i in range(101,1000):
             # Get first digit
             w = nums[(i//100) * 100] + 'and'
-
             # Numbers like 111, 112, ..., 119
             if i % 100 in nums.keys():
                 w += nums[i % 100]
             else:
                 # Get second and thrid digits
                 w += nums[(i//10) % 10 * 10] +  nums[i%10]
-            count += len(w)
-            
+            count += len(w)         
     return count
+
 
 if __name__ == "__main__":
     nums = {0:'', 1:'one', 2:'two', 3:'three', 4:'four', 5:'five', 6:'six', 7:'seven', 8:'eight', 9:'nine',
@@ -51,7 +50,7 @@ if __name__ == "__main__":
         400:'fourhundred', 500:'fivehundred', 600:'sixhundred', 700:'sevenhundred', 800:'eighthundred',
         900:'ninehundred', 1000:'onethousand'}
     
-    print(countNums(1000, nums))
+    print(countNums(21, nums))
 
 
     '''
