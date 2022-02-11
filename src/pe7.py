@@ -5,9 +5,11 @@
 # By listing the first six prime numbers: 2, 3, 5, 7, 11, and 13, we can see that the 6th prime is 13.
 #
 # What is the 10001st prime number?
+#
+# Ans: 104743
 ############################################################################################################################
 
-def isPrime(num):
+def isPrime(num: int) -> bool:
     '''
     Args:
         num (int): number to check if prime
@@ -27,7 +29,7 @@ def isPrime(num):
                 return False
         return True
 
-def nPrimes(n):
+def nPrimes(n: int) -> list:
     '''
     Args:
         n (int > 0): The index of the prime number to return
@@ -43,6 +45,6 @@ def nPrimes(n):
         i += 1
     return primes
 
+
 if __name__ == "__main__":        
-    n = 10001
-    print(nPrimes(n)[-1])
+    print(nPrimes(10001)[-1])
