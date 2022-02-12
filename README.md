@@ -47,6 +47,8 @@
 | 30                 | [Digit fifth powers](https://projecteuler.net/problem=30 "Published on Friday, 8th November 2002, 06:00 pm")                | [pe30.py](https://github.com/VictorCannestro/Project_Euler/blob/master/src/pe30.py)| [test_pe30.py](https://github.com/VictorCannestro/Project_Euler/blob/master/tests/test_pe30.py) |
 | 31                 | [Coin sums](https://projecteuler.net/problem=31 "Published on Friday, 22nd November 2002, 06:00 pm")                        | [pe31.py](https://github.com/VictorCannestro/Project_Euler/blob/master/src/pe31.py)| [test_pe31.py](https://github.com/VictorCannestro/Project_Euler/blob/master/tests/test_pe31.py) |
 | 32                 | [Pandigital products](https://projecteuler.net/problem=32 "Published on Friday, 6th December 2002, 06:00 pm")               | [](https://github.com/VictorCannestro/Project_Euler/blob/master/src/pe32.py)|    |
+
+<!--   
 | 33                 | [Digit cancelling fractions](https://projecteuler.net/problem=33 "Published on Friday, 20th December 2002, 06:00 pm")       | [](https://github.com/VictorCannestro/Project_Euler/blob/master/src/pe33.py)|    |
 | 34                 | [Digit factorials](https://projecteuler.net/problem=34 "Published on Friday, 3rd January 2003, 06:00 pm")                   | [](https://github.com/VictorCannestro/Project_Euler/blob/master/src/pe34.py)|    |
 | 35                 | [Circular primes](https://projecteuler.net/problem=35 "Published on Friday, 17th January 2003, 06:00 pm")                   | [](https://github.com/VictorCannestro/Project_Euler/blob/master/src/pe35.py)|    |
@@ -56,7 +58,7 @@
 | 39                 | [Integer right triangles](https://projecteuler.net/problem=39 "Published on Friday, 14th March 2003, 06:00 pm")             | [](https://github.com/VictorCannestro/Project_Euler/blob/master/src/pe39.py)|    |
 | 40                 | [Champernowne's constant](https://projecteuler.net/problem=40 "Published on Friday, 28th March 2003, 06:00 pm")             | [](https://github.com/VictorCannestro/Project_Euler/blob/master/src/pe40.py)|    |
 
-<!--           
+        
 | 41                 | [Pandigital prime](https://projecteuler.net/problem=41 "Published on Friday, 11th April 2003, 06:00 pm")                    |
 | 42                 | [Coded triangle numbers](https://projecteuler.net/problem=42 "Published on Friday, 25th April 2003, 06:00 pm")              |
 | 43                 | [Sub-string divisibility](https://projecteuler.net/problem=43 "Published on Friday, 9th May 2003, 06:00 pm")                |
