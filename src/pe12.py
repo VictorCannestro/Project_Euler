@@ -21,34 +21,35 @@
 # We can see that 28 is the first triangle number to have over five divisors.
 #
 # What is the value of the first triangle number to have over five hundred divisors?
+#
+# Answer: 76,576,500
 ############################################################################################################################
 
 import numpy as np
 
-def genTriBruteForce(k):
-    '''Generate triangle numbers i.e. the sum of first k natural numbers'''
+
+'''
+def gen_tri_brute_force(k: int) -> int:
+    ''Generate triangle numbers i.e. the sum of first k natural numbers''
     return sum(i for i in range(k))
 
-def genTri(k):
-    '''Generate triangle numbers via analytical formula'''
-    return (k*(k+1)) // 2
-
-def divisorsBruteForce(tri):
-    '''Generate a list of the divisors of a triangle number'''
+def divisors_brute_force(tri: int) -> set:
+    ''Generate a set of the divisors of a triangle number''
     divs = set(tri//i for i in range(1, tri//2 + 1) if tri % i == 0)
     divs.update([1, tri])
     return divs
+'''
 
-def divisors(n):
+def genTri(k: int) -> int:
+    '''Generate triangle numbers via analytical formula'''
+    return (k*(k+1)) // 2
+
+def divisors(n: int) -> set:
     '''
     Args:
-        n: number to get divisors of
-        
+        n (n > 0): integer to find the divisors of       
     Returns:
-        divisors (set): the set of divisors
-        
-    Notes:
-        Runs in O(sqrt(n)) time
+        divisors (set): the set of divisors of n in O(sqrt(n)) time
     '''
     i = 1
     divisors = set([])
@@ -61,23 +62,18 @@ def divisors(n):
         i += 1
     return divisors
 
-def ndivisors(n):
+def ndivisors_brute_force(n: int) -> int:
     '''
     Args:
         n (int > 0): lower bound for number of divisors
-    
     Returns:
         num: the value of the first triangle number to have over n divisors
     '''
     i = 1
-    count = 1
-    while count < n:
+    while len(divisors(genTri(i))) < n:
         i += 1
-        count = len(divisors(genTri(i)))
     return genTri(i)
 
-if __name__ == "__main__":
-    n = 500
-    print(ndivisors(n))
 
-    # Answer: 76,576,500
+if __name__ == "__main__":
+    print(ndivisors_brute_force(500))

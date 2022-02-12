@@ -6,29 +6,27 @@
 #
 # Find the sum of all the primes below two million.
 ############################################################################################################################
+from typing import Optional
+Collection = Optional[int]
 
-def eratosthenes(n):
+
+def eratosthenes(n: int) -> set:
     '''
     Args:
-        n (int > 0): the upper bound of primes to consider
-    
+        n (int > 0): the upper bound of primes to consider   
     Returns:
         (generator): of prime numbers <= n
     '''
-    # Use set to have unique elements
-    multiples = set()
-    # Iterate over each integer in interval [2,n]
-    for i in range(2, n+1):
-        # Multiples are not primes, so all leftovers are
-        if i not in multiples:
-            # Yield the next prime number
-            yield i
-            # Add to the list of integer multiples: [i**2,n] in steps of i 
-            multiples.update(range(i*i, n+1, i))
+    multiples = set()                            # Use set to have unique elements
+    for i in range(2, n+1):                                         
+        if i not in multiples:                   # Multiples are not primes, so all leftovers are                      
+            yield i                              # Yield the next prime number
+            multiples.update(range(i*i, n+1, i)) # Add to the list of integer multiples: [i**2,n] in steps of i
 
-def sumPrime(primes):
-    return sum(i for i in primes)
+def sum_iterable(collection: Collection) -> int:
+    '''Utility function to take the sum of a collection of integers'''
+    return sum(collection)
+
 
 if __name__ == "__main__":
-    n = 2000000
-    print(sumPrime([*eratosthenes(n)]))
+    print(sum_iterable(eratosthenes(2000000)))

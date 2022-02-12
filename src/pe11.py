@@ -8,7 +8,7 @@
 # What is the greatest product of four adjacent numbers in the same direction 
 # (up, down, left, right, or diagonally) in the 20×20 grid?
 ############################################################################################################################
-
+import pprint
 import numpy as np
 
 def north(i,j):
@@ -113,9 +113,10 @@ if __name__ == "__main__":
 
     # Parse the 20x20 block of numbers into a numpy array of strings
     matrix = [row.split(' ') for row in matrix.replace('           ','').split('\n ')]
-    arr = np.array(matrix)
+    arr = np.array(matrix, dtype=object)
 
     # Get the shape of the array for later processing
+    print(arr)
     n,m = np.shape(arr)
 
     prod = []
@@ -124,6 +125,7 @@ if __name__ == "__main__":
             for vector in directions(row,col,(n,m)): # iterator over the list of valid directions
                 temp = 1
                 for idx in vector: # Iterate over a singe direction vector in list of valid directions
+                    pprint.pprint(arr[idx[0], idx[1]])    
                     temp *= int(arr[idx[0], idx[1]]) # cast element at index in the direction vector to int and multiply 
                 prod.append(temp)
 
