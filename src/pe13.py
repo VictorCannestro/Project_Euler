@@ -11,7 +11,7 @@ from typing import List
 
 def read_data(filename: str="../data/p013_50-digit_ints.txt"):
     '''Attempts to read in the passed filename and returns its contents'''
-    with open(filename) as blob:
+    with open(filename, 'r') as blob:
         return blob.readlines()
         
 def clean(text: List[str]) -> List[int]:

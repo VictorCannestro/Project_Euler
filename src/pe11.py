@@ -13,9 +13,9 @@
 from typing import List
 
 
-def read_data(filename: str="../data/p011_number_grid.txt"):
+def read_data(filename:str="../data/p011_number_grid.txt"):
     '''Attempts to read in the passed filename and returns its contents'''
-    with open(filename) as blob:
+    with open(filename, 'r') as blob:
         return blob.readlines()
         
 def clean(text: List[str]) -> List[int]:
@@ -27,52 +27,53 @@ def clean(text: List[str]) -> List[int]:
             text[i][j] = int(element)              # Cast elements to integers
     return text
 
-def north(i,j):
+def north(i: int, j: int) -> list:
+    '''Generates indices N if there are enough elements'''
     idxs = []
     if i - 3 >= 0:
         idxs += [(x, j) for x in range(i, i-4, -1)]
     return idxs
     
-def south(i,j,r):
+def south(i: int, j: int, r: int) -> list:
     idxs = []
     if i + 3 < r:
         idxs += [(x, j) for x in range(i, i+4, 1)]
     return idxs
     
-def east(i,j,c):
+def east(i: int, j: int, c: int) -> list:
     idxs = []
     if j + 3 < c:
         idxs += [(i, x) for x in range(j, j+4, 1)]
     return idxs
 
-def west(i,j):
+def west(i: int, j: int) -> list:
     idxs = []
     if j - 3 >= 0:
         idxs += [(i, x) for x in range(j, j-4, -1)]
     return idxs
 
-def northeast(i,j,c):
+def northeast(i: int, j: int, c: int) -> list:
     idxs = []
     # conditions for east and north boundaries
     if i - 3 >= 0 and j + 3 < c:
         idxs += [(i-up, x) for up,x in enumerate(range(j, j+4, 1))]
     return idxs
 
-def northwest(i,j):
+def northwest(i: int, j: int) -> list:
     idxs = []
     # conditions for west and north boundaries
     if j - 3 >= 0 and i - 3 >= 0:
         idxs += [(i-up, x) for up,x in enumerate(range(j, j-4, -1))]
     return idxs
 
-def southeast(i,j,r,c):
+def southeast(i: int, j: int, r: int, c: int) -> list:
     idxs = []
     # conditions for east and south boundaries
     if i + 3 < r and j + 3 < c:
         idxs += [(i+down, x) for down,x in enumerate(range(j, j+4, 1))]
     return idxs
 
-def southwest(i,j,r):
+def southwest(i: int, j: int, r: int) -> list:
     idxs = []
     # conditions for west and south boundaries
     if j - 3 >= 0 and i + 3 < r:
@@ -80,7 +81,7 @@ def southwest(i,j,r):
     return idxs
 
 
-def directions(i: int, j: int, shape):
+def directions(i: int, j: int, shape) -> List[List[tuple]]:
     '''
     Args:
         i (int >= 0): the index of the row to consider
@@ -121,15 +122,15 @@ def max_prod_in_grid(matrix: List[List[int]]) -> int:
     '''
     n,m = len(matrix), len(matrix[0])
     prod = []
-    for row in range(n):                      # Iterate over each row vector
-        for col in range(m):             # Iterate over element in a given row     
+    for row in range(n):                             # Iterate over each row vector
+        for col in range(m):                         # Iterate over element in a given row     
             for vector in directions(row,col,(n,m)): # Iterator over the list of valid directions
                 temp = 1
                 for idx in vector:                   # Iterate over a singe direction vector in list of valid directions 
-                    temp *= int(matrix[idx[0]][idx[1]]) # Cast element at index in the direction vector to int and multiply 
+                    temp *= matrix[idx[0]][idx[1]]   # Calculate the product in a given direction 
                 prod.append(temp)
     return max(prod) 
 
 
-if __name__ == "__main__":            
+if __name__ == "__main__": 
     print(max_prod_in_grid(clean(read_data())))
