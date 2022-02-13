@@ -1,4 +1,4 @@
-from src.pe11 import directions
+from src.pe11 import directions, max_prod_in_grid, clean, southwest, southeast, northwest, northeast, west, east, south, north
 import numpy as np
 
 def test_1():
