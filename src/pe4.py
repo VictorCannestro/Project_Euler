@@ -11,7 +11,7 @@
 import numpy as np
 
 
-def isPal(n: int) -> bool:
+def is_palindrome_ver1(n: int) -> bool:
     '''
     Args:
         n (int >= 0): natural number palindrome candidate
@@ -33,7 +33,7 @@ def isPal(n: int) -> bool:
     return a == b                    # Do the two sides match exactly?
 
 
-def isPalindrome(x: int) -> bool:
+def is_palindrome_ver2(x: int) -> bool:
     '''
     Args:
         n (int >= 0): natural number palindrome candidate
@@ -61,11 +61,11 @@ def findLargestPalindrome(d=3):
     '''
     # Highest and lowest d-digit numbers e.g. If d=3 then h=999 and l=100
     h, l = int('9'*d), 10**(d-1)
-    x = np.array([[*range(l,h+1)]])  # All of the d-digit numbers row vector
-    y = np.reshape(x, (len(x[0]),1)) # Column vector version
-    z = y.dot(x)                     # The multiplication table of d-digit numbers
-    calc = np.vectorize(isPal)(z)    # Apply the isPal function to multiplication table
-    return max(z[calc])              # Filter to get palindromes pick get the biggest
+    x = np.array([[*range(l,h+1)]])            # All of the d-digit numbers row vector
+    y = np.reshape(x, (len(x[0]),1))           # Column vector version
+    z = y.dot(x)                               # The multiplication table of d-digit numbers
+    calc = np.vectorize(is_palindrome_ver2)(z) # Apply the isPal function to multiplication table
+    return max(z[calc])                        # Filter to get palindromes pick get the biggest
 
 
 if __name__ == "__main__":

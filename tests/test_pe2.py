@@ -1,12 +1,12 @@
-from src.pe2 import fibSum, generateFibs, evenFibSum
+from src.pe2 import brute_force, generateFibs, evenFibSum
 
 
-class TestFibSum(object):  
+class TestBruteForce(object):  
     def test_typefibSum(self):
-        assert type(fibSum()) == int
+        assert type(brute_force()) == int
         
     def test_ans(self):
-        assert fibSum(4000000) == 4613732
+        assert brute_force(4000000) == 4613732
     
     
 class TestEvenFibSum(object): 

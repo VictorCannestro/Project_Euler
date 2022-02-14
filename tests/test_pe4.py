@@ -1,37 +1,37 @@
-from src.pe4 import findLargestPalindrome, isPalindrome, isPal
+from src.pe4 import findLargestPalindrome, is_palindrome_ver1, is_palindrome_ver2
 import pytest
 
 
-class TestIsPal(object):
+class TestIsPalindromeVer1(object):
     inputs =  [1,     15,    55,   101,  444,  100000001, 123412341234]
     answers = [True,  False, True, True, True, True,      False]
     
     @pytest.mark.xfail
     def test_nonnaturals(self):
         with pytest.raises(ValueError) as exception_info:
-            calc = isPal(-1)
+            calc = is_palindrome_ver1(-1)
         assert exception_info.match("Input must be non-negative")
         
     @pytest.mark.parametrize("x, ans", zip(inputs, answers))
     def test_typical_input(self, x, ans):
-        calc = isPal(x)
+        calc = is_palindrome_ver1(x)
         message = "Not a palindrome"
         assert calc == ans, message
 
 
-class TestIsPalindrome(object):
+class TestIsPalindromeVer2(object):
     inputs =  [1,     15,    55,   101,  444,  100000001, 123412341234]
     answers = [True,  False, True, True, True, True,      False]
     
     @pytest.mark.xfail
     def test_nonnaturals(self):
         with pytest.raises(ValueError) as exception_info:
-            calc = isPalindrome(-1)
+            fail = is_palindrome_ver2(-1)
         assert exception_info.match("Input must be non-negative")
         
     @pytest.mark.parametrize("x, ans", zip(inputs, answers))
     def test_typical_input(self, x, ans):
-        calc = isPalindrome(x)
+        calc = is_palindrome_ver2(x)
         message = "Not a palindrome"
         assert calc == ans, message
 

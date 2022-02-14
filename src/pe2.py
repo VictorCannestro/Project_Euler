@@ -42,7 +42,7 @@ def evenFibSum(limit=60) -> int:
     return sum(fib for fib in generateFibs(limit) if fib % 2 == 0)
 
 
-def fibSum(tol=4000000) -> int:
+def brute_force(tol=4000000) -> int:
     '''
     Returns
     -------

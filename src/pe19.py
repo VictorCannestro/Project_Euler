@@ -16,31 +16,20 @@
 # on a century unless it is divisible by 400.
 #
 # How many Sundays fell on the first of the month during the twentieth century (1 Jan 1901 to 31 Dec 2000)?
+#
+# Ans: 171
 ############################################################################################################################
 
-# https://docs.python.org/3/library/datetime.html
-import datetime as dt
-# https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.date_range.html
-import pandas as pd
+import datetime as dt  # https://docs.python.org/3/library/datetime.html
+import pandas as pd    # https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.date_range.html
+
 
 def find1stSundays(start, end):
-    # Define the range of dates to consider
-    search_space = pd.date_range(start, end)
+    search_space = pd.date_range(start, end)                 # Define the range of dates to consider
+    first_of_months = search_space.map(lambda x: x.day == 1) # Boolean array determining first days of the month
+    sundays = search_space.map(lambda x: x.weekday == 6)     # Return the day of the week as an integer, where Monday is 0 and Sunday is 6
+    return sum(first_of_months.values * sundays.values)      # Boolean multiplication of np arrays to determine the number of first days of the month that are Sundays
 
-    # Boolean array determining first days of the month
-    first_of_months = search_space.map(lambda x: x.day == 1)
-
-    # Return the day of the week as an integer, where Monday is 0 and Sunday is 6
-    sundays = search_space.map(lambda x: x.weekday == 6)
-
-    # Boolean multiplication of np arrays to determine the number of first days of the month that are Sundays
-    calc = sum(first_of_months.values * sundays.values)
-    
-    return calc
 
 if __name__ == "__main__":
-    # 1 Jan 1901 
-    start = dt.date(1901, 1, 1)
-    # 31 Dec 2000
-    end = dt.date(2000, 12, 31)    
-    print(find1stSundays(start, end))
+    print(find1stSundays(dt.date(1901, 1, 1), dt.date(2000, 12, 31)))

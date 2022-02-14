@@ -29,7 +29,6 @@ def collatz(n: int) -> int:
         n = 3*n + 1
     return n
 
-
 def lenCollatz(i: int) -> int:
     '''
     Args:
@@ -45,7 +44,6 @@ def lenCollatz(i: int) -> int:
         num = collatz(num)
         count += 1
     return count
-
 
 def runSimulation(start: int=1, end: int=1000000) -> int:
     start_of_longest, longest_length = 1, 1

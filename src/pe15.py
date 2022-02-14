@@ -10,11 +10,11 @@
 
 from math import factorial
 
-def pathChoices(n):
+
+def pathChoices(n: int) -> int:
     '''
     Args:
         n (int > 0): the size of 1 grid dimension
-
     Returns:
         (int): the number of path choices in an nxn grid if we can only move
                down or right.
@@ -29,6 +29,7 @@ def pathChoices(n):
         https://www.wikiwand.com/en/Catalan_number
     '''
     return factorial(2*n) // (factorial(n)*factorial(n))
+
 
 if __name__ == "__main__":
     print(pathChoices(20))
