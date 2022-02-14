@@ -19,6 +19,8 @@
 # Notes:
 #        (1) The proper divisor algorithm is a bottleneck
 #        (2) The sum_of_2_abundants is a bottleneck
+#
+# Ans: 4179871
 ############################################################################################################################
 
 def propDivisors(n):
@@ -37,9 +39,6 @@ def propDivisors(n):
     '''
     return [x for x in range(1, (n + 1) // 2 + 1) if n % x == 0 and n != x]
 
-def sumDivisors(n):
-    return sum(propDivisors(n))
-
 def recordSums(n):
     '''
     Args:
@@ -48,20 +47,19 @@ def recordSums(n):
         (dict): a dictionary of the natural numbers with values equal to the sum 
                 of each's proper divisors
     '''
-    return {k:sumDivisors(k) for k in range(1, n+1)}
+    return {k:sum(propDivisors(k)) for k in range(1, n+1)}
+
 
 if __name__ == "__main__":
     # Filter to find all the abundant numbers below the analytic limit
-    N = 28123
-    abundant = [k for k,v in recordSums(N).items() if v > k]
+    abundant = [k for k,v in recordSums(28123).items() if v > k]
 
     # Find all the numbers that are the sum of 2 abundant numbers (below analytic limit) 
     sum_of_2_abundants = set([i+j for i in abundant for j in abundant])
 
     # The set of all nums up to our analytic limit 
-    all_nums = set([*range(1,N+1)])
+    all_nums = set([*range(1, 28123+1)])
 
     # Filter out all the numbers that can be written as the sum of two abundant numbers
     not_sum_of_2 = list(all_nums - sum_of_2_abundants)
-    ans = sum(not_sum_of_2)
-    print(ans)
+    print(sum(not_sum_of_2))
