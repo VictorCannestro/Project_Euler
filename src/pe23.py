@@ -23,7 +23,7 @@
 # Ans: 4179871
 ############################################################################################################################
 
-def propDivisors(n):
+def propDivisors(n: int) -> list:
     '''
     Args: 
             n (int): the number to find divisors of
@@ -39,27 +39,41 @@ def propDivisors(n):
     '''
     return [x for x in range(1, (n + 1) // 2 + 1) if n % x == 0 and n != x]
 
-def recordSums(n):
+def generateAbundants(n: int) -> dict:
     '''
     Args:
         n (int): the upper bound of the search space 
     Returns:
-        (dict): a dictionary of the natural numbers with values equal to the sum 
-                of each's proper divisors
+        (dict): all the abundant numbers below the analytic limit
+    Notes:
+        Could use {k:sum(propDivisors(k)) for k in range(1, n+1)}
     '''
-    return {k:sum(propDivisors(k)) for k in range(1, n+1)}
+    abundants = dict()
+    for key in range(1, n+1):
+        calc = sum(propDivisors(key))
+        if calc > key:
+            abundants[key] = calc
+    return abundants
+
+def calculateNonAbundantSums(N:int=28123) -> int:
+    '''
+    Parameters
+    ----------
+    N : int, optional
+        The upper limit in which all integers greater than can be written as 
+        the sum of two abundant numbers. The default is 28123.
+    Returns
+    -------
+    int
+        The sum of all the positive integers which cannot be written as the 
+        sum of two abundant numbers.
+    '''
+    abundants = generateAbundants(N)
+    sum_of_2_abundants = set([i+j for i in abundants for j in abundants]) # Find all the numbers that are the sum of 2 abundant numbers (below analytic limit)
+    all_nums = set([*range(1, N+1)])                                      # The set of all nums up to our analytic limit
+    not_sum_of_2 = list(all_nums - sum_of_2_abundants)                    # Filter out all the numbers that can be written as the sum of two abundant numbers
+    return sum(not_sum_of_2)
 
 
 if __name__ == "__main__":
-    # Filter to find all the abundant numbers below the analytic limit
-    abundant = [k for k,v in recordSums(28123).items() if v > k]
-
-    # Find all the numbers that are the sum of 2 abundant numbers (below analytic limit) 
-    sum_of_2_abundants = set([i+j for i in abundant for j in abundant])
-
-    # The set of all nums up to our analytic limit 
-    all_nums = set([*range(1, 28123+1)])
-
-    # Filter out all the numbers that can be written as the sum of two abundant numbers
-    not_sum_of_2 = list(all_nums - sum_of_2_abundants)
-    print(sum(not_sum_of_2))
+    print(calculateNonAbundantSums())

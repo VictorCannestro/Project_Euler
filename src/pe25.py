@@ -10,24 +10,26 @@
 #
 # What is the index of the first term in the Fibonacci sequence 
 # to contain 1000 digits?
+#
+# Ans: 4782
 ############################################################################################################################
 
 from functools import lru_cache
 
+
 @lru_cache()
-def fibo(n):
+def fibo(n: int) -> int:
     '''Returns the nth fibonacci number using a memoization wrapper'''
     if n < 2:
         return n
     return fibo(n-2) + fibo(n-1)
 
-def fiboLength(x):
+def fiboLength(x: int) -> int:
     '''
     Parameters
     ----------
     x : int
         the desired length of the fibonacci number.
-
     Returns
     -------
     idx : int
@@ -40,6 +42,6 @@ def fiboLength(x):
         idx += 1
     return idx - 1
 
+
 if __name__ == "__main__":
-    digits = 2
-    print(fiboLength(digits))
+    print(fiboLength(1000))

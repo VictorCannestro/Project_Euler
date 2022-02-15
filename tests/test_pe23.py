@@ -1,17 +1,40 @@
-from src.pe23 import recordSums 
+from src.pe23 import propDivisors, generateAbundants, calculateNonAbundantSums
+import pytest
 
-def test_1():
-    # Filter to find all the abundant numbers below the analytic limit
-    N = 28123
-    abundant = [k for k,v in  recordSums(N).items() if v > k]
 
-    # Find all the numbers that are the sum of 2 abundant numbers (below analytic limit) 
-    sum_of_2_abundants = set([i+j for i in abundant for j in abundant])
+class TestPropDivisors(object):
+    ns = [2, 13, 100]
+    answers = [[1], [1], [1,2,4,5,10,20,25,50]]
+    
+    def test_edge(self):
+        calc = propDivisors(1)
+        ans = []
+        message = f"Expected {ans}\nBut got {calc}"
+        assert calc == ans, message 
+        
+    @pytest.mark.parametrize("n, ans", zip(ns, answers))
+    def test_standard(self, n, ans):
+        calc = propDivisors(n)
+        message = f"Expected {ans}\nBut got {calc}"
+        assert calc == ans, message 
 
-    # The set of all nums up to our analytic limit 
-    all_nums = set([*range(1,N+1)])
+class TestGenerateAbundants(object):
+    def test_smallest(self):
+        calc = min(generateAbundants(24))
+        ans = 12
+        message = f"Expected {ans}\nBut got {calc}"
+        assert calc == ans, message     
+        
+    def test_up_to_100(self):
+        calc = list(generateAbundants(100).keys())
+        ans = [12, 18, 20, 24, 30, 36, 40, 42, 48, 54, 56, 60, 66, 70, 72, 78, 80, 84, 88, 90, 96, 100]
+        message = f"Expected {ans}\nBut got {calc}"
+        assert calc == ans, message
+        
 
-    # Filter out all the numbers that can be written as the sum of two abundant numbers
-    not_sum_of_2 = list(all_nums - sum_of_2_abundants)
-    ans = sum(not_sum_of_2)
-    assert ans == 4179871
+class TestCalculateNonAbundantSums(object):
+    def test_answer(self):
+        calc = calculateNonAbundantSums()
+        ans = 4179871
+        message = f"Expected {ans}\nBut got {calc}"
+        assert calc == ans, message
