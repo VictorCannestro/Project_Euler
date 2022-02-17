@@ -18,7 +18,7 @@ where |n| is the modulus/absolute value of n, e.g. |-11|=11 and |11|=11.
 Find the product of the coefficients, a and b, for the quadratic expression that produces 
 the maximum number of primes for consecutive values of n, starting with n=0.
 
-Ans: 
+Ans: -59231
 '''
 
 def is_prime(num: int) -> bool:
@@ -92,6 +92,7 @@ def find_coefficients(N: int, prime_map: dict) -> list:
 def calculate_coefficient_prod(info: list) -> int:
     '''Extracts coefficients and calculates the product to get the answer'''
     (a,b), length = info
+    print(f"The longest streak was {length} corresponding to the equation n**2 + ({a}*n) + {b}")
     return a*b
     
 
