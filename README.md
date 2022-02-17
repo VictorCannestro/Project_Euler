@@ -3,12 +3,14 @@
 <a href="https://lgtm.com/projects/g/VictorCannestro/Project_Euler/context:python"><img alt="Language grade: Python" src="https://img.shields.io/lgtm/grade/python/g/VictorCannestro/Project_Euler.svg?logo=lgtm&logoWidth=18"/></a>
 <a href="https://lgtm.com/projects/g/VictorCannestro/Project_Euler/alerts/"><img alt="Total alerts" src="https://img.shields.io/lgtm/alerts/g/VictorCannestro/Project_Euler.svg?logo=lgtm&logoWidth=18"/></a>
 
-<img align="left" width="150" height="175" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Leonhard_Euler_-_edit1.jpg/640px-Leonhard_Euler_-_edit1.jpg">
+<img align="left" width="200" height="250" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Leonhard_Euler_-_edit1.jpg/640px-Leonhard_Euler_-_edit1.jpg">
 <img align="center"  src="https://user-images.githubusercontent.com/7690993/152918004-8d21e97c-e4d6-4e7a-9fa9-fd104757af82.png">
 
 <p>
   Here lies my attempts at the problems posted on https://projecteuler.net/archives. The table bearing the problem ID and description below will be updated periodically as I work through more problems. All problem solutions are written in Python and will be placed within the "src" folder.
 </p>
+
+![](https://projecteuler.net/images/awards/award_01.png) ![](https://projecteuler.net/images/awards/award_02.png) ![](https://projecteuler.net/images/awards/award_03.png) 
 
 ***
 
