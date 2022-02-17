@@ -10,43 +10,43 @@
   Here lies my attempts at the problems posted on https://projecteuler.net/archives. The table bearing the problem ID and description below will be updated periodically as I work through more problems. All problem solutions are written in Python and will be placed within the "src" folder.
 </p>
 
-![](https://projecteuler.net/images/awards/award_01.png) ![](https://projecteuler.net/images/awards/award_02.png) ![](https://projecteuler.net/images/awards/award_03.png) 
+![Baby Steps: Solve three problems](https://projecteuler.net/images/awards/award_01.png) ![The Journey Begins: Progress to Level 1 by solving twenty-five problems](https://projecteuler.net/images/awards/award_02.png) ![Decathlete: Solve ten consecutive problems](https://projecteuler.net/images/awards/award_03.png) 
 
 ***
 
 |**ID**              | Description / Title                                                                                                         | Solution  | Tests     | Status |
 | ------------------ | --------------------------------------------------------------------------------------------------------------------------- | --------- | --------- | ---------- | 
 |                    |                                                                                                                             |           |           |            |
-| 1                  | [Multiples of 3 and 5](https://projecteuler.net/problem=1 "Published on Friday, 5th October 2001, 06:00 pm")                | [pe1.py](/src/pe1.py) | [test_pe1.py](/tests/test_pe1.py) |✅| 
-| 2                  | [Even Fibonacci numbers](https://projecteuler.net/problem=2 "Published on Friday, 19th October 2001, 06:00 pm")             | [pe2.py](/src/pe2.py)| [test_pe2.py](/tests/test_pe2.py) |✅| 
-| 3                  | [Largest prime factor](https://projecteuler.net/problem=3 "Published on Friday, 2nd November 2001, 06:00 pm")               | [pe3.py](/src/pe3.py)| [test_pe3.py](/tests/test_pe3.py) |✅| 
-| 4                  | [Largest palindrome product](https://projecteuler.net/problem=4 "Published on Friday, 16th November 2001, 06:00 pm")        | [pe4.py](/src/pe4.py)| [test_pe4.py](/tests/test_pe4.py) |✅| 
-| 5                  | [Smallest multiple](https://projecteuler.net/problem=5 "Published on Friday, 30th November 2001, 06:00 pm")                 | [pe5.py](/src/pe5.py)| [test_pe5.py](/tests/test_pe5.py) |✅| 
-| 6                  | [Sum square difference](https://projecteuler.net/problem=6 "Published on Friday, 14th December 2001, 06:00 pm")             | [pe6.py](/src/pe6.py)| [test_pe6.py](/tests/test_pe6.py) |✅| 
-| 7                  | [10001st prime](https://projecteuler.net/problem=7 "Published on Friday, 28th December 2001, 06:00 pm")                     | [pe7.py](/src/pe7.py)| [test_pe7.py](/tests/test_pe7.py) |✅| 
-| 8                  | [Largest product in a series](https://projecteuler.net/problem=8 "Published on Friday, 11th January 2002, 06:00 pm")        | [pe8.py](/src/pe8.py)| [test_pe8.py](/tests/test_pe8.py) |✅| 
-| 9                  | [Special Pythagorean triplet](https://projecteuler.net/problem=9 "Published on Friday, 25th January 2002, 06:00 pm")        | [pe9.py](/src/pe9.py)| [test_pe9.py](/tests/test_pe9.py) |✅| 
-| 10                 | [Summation of primes](https://projecteuler.net/problem=10 "Published on Friday, 8th February 2002, 06:00 pm")               | [pe10.py](/src/pe10.py)| [test_pe10.py](/tests/test_pe10.py) |✅| 
-| 11                 | [Largest product in a grid](https://projecteuler.net/problem=11 "Published on Friday, 22nd February 2002, 06:00 pm")        | [pe11.py](/src/pe11.py)| [test_pe11.py](/tests/test_pe11.py) |✅| 
-| 12                 | [Highly divisible triangular number](https://projecteuler.net/problem=12 "Published on Friday, 8th March 2002, 06:00 pm")   | [pe12.py](/src/pe12.py)| [test_pe12.py](/tests/test_pe12.py) |✅| 
-| 13                 | [Large sum](https://projecteuler.net/problem=13 "Published on Friday, 22nd March 2002, 06:00 pm")                           | [pe13.py](/src/pe13.py)| [test_pe13.py](/tests/test_pe13.py) |✅| 
-| 14                 | [Longest Collatz sequence](https://projecteuler.net/problem=14 "Published on Friday, 5th April 2002, 06:00 pm")             | [pe14.py](/src/pe14.py)| [test_pe14.py](/tests/test_pe14.py) |✅| 
-| 15                 | [Lattice paths](https://projecteuler.net/problem=15 "Published on Friday, 19th April 2002, 06:00 pm")                       | [pe15.py](/src/pe15.py)| [test_pe15.py](/tests/test_pe15.py) |✅| 
-| 16                 | [Power digit sum](https://projecteuler.net/problem=16 "Published on Friday, 3rd May 2002, 06:00 pm")                        | [pe16.py](/src/pe16.py)| [test_pe16.py](/tests/test_pe16.py) |✅| 
-| 17                 | [Number letter counts](https://projecteuler.net/problem=17 "Published on Friday, 17th May 2002, 06:00 pm")                  | [pe17.py](/src/pe17.py)| [test_pe17.py](/tests/test_pe17.py) |✅| 
-| 18                 | [Maximum path sum I](https://projecteuler.net/problem=18 "Published on Friday, 31st May 2002, 06:00 pm")                    | [pe18.py](/src/pe18.py)| [test_pe18.py](/tests/test_pe18.py) |
-| 19                 | [Counting Sundays](https://projecteuler.net/problem=19 "Published on Friday, 14th June 2002, 06:00 pm")                     | [pe19.py](/src/pe19.py)| [test_pe19.py](/tests/test_pe19.py) |✅| 
-| 20                 | [Factorial digit sum](https://projecteuler.net/problem=20 "Published on Friday, 21st June 2002, 06:00 pm")                  | [pe20.py](/src/pe20.py)| [test_pe20.py](/tests/test_pe20.py) |✅| 
-| 21                 | [Amicable numbers](https://projecteuler.net/problem=21 "Published on Friday, 5th July 2002, 06:00 pm")                      | [pe21.py](/src/pe21.py)| [test_pe21.py](/tests/test_pe21.py) |✅| 
-| 22                 | [Names scores](https://projecteuler.net/problem=22 "Published on Friday, 19th July 2002, 06:00 pm")                         | [pe22.py](/src/pe22.py)| [test_pe22.py](/tests/test_pe22.py) |✅| 
-| 23                 | [Non-abundant sums](https://projecteuler.net/problem=23 "Published on Friday, 2nd August 2002, 06:00 pm")                   | [pe23.py](/src/pe23.py)| [test_pe23.py](/tests/test_pe23.py) |✅| 
-| 24                 | [Lexicographic permutations](https://projecteuler.net/problem=24 "Published on Friday, 16th August 2002, 06:00 pm")         |  [pe24.py](/src/pe24.py)| [test_pe24.py](/tests/test_pe24.py) |✅| 
-| 25                 | [1000-digit Fibonacci number](https://projecteuler.net/problem=25 "Published on Friday, 30th August 2002, 06:00 pm")        |  [pe25.py](/src/pe25.py)| [test_pe25.py](/tests/test_pe25.py) |✅| 
-| 26                 | [Reciprocal cycles](https://projecteuler.net/problem=26 "Published on Friday, 13th September 2002, 06:00 pm")               | [pe26.py](/src/pe26.py)| [test_pe26.py](/tests/test_pe26.py) |✅| 
-| 27                 | [Quadratic primes](https://projecteuler.net/problem=27 "Published on Friday, 27th September 2002, 06:00 pm")                | [pe27.py](/src/pe27.py)| [test_pe27.py](/tests/test_pe27.py) |✅| 
-| 28                 | [Number spiral diagonals](https://projecteuler.net/problem=28 "Published on Friday, 11th October 2002, 06:00 pm")           | [pe28.py](/src/pe28.py)| [test_pe28.py](/tests/test_pe28.py) |✅| 
-| 29                 | [Distinct powers](https://projecteuler.net/problem=29 "Published on Friday, 25th October 2002, 06:00 pm")                   | [pe29.py](/src/pe29.py)| [test_pe29.py](/tests/test_pe29.py) |
-| 30                 | [Digit fifth powers](https://projecteuler.net/problem=30 "Published on Friday, 8th November 2002, 06:00 pm")                | [pe30.py](/src/pe30.py)| [test_pe30.py](/tests/test_pe30.py) |
+| 1                  | [Multiples of 3 and 5](https://projecteuler.net/problem=1 "Published on Friday, 5th October 2001, 06:00 pm")                | [pe1.py](/src/pe1.py) | [test_pe1.py](/tests/test_pe1.py) |🟢| 
+| 2                  | [Even Fibonacci numbers](https://projecteuler.net/problem=2 "Published on Friday, 19th October 2001, 06:00 pm")             | [pe2.py](/src/pe2.py)| [test_pe2.py](/tests/test_pe2.py) |🟢| 
+| 3                  | [Largest prime factor](https://projecteuler.net/problem=3 "Published on Friday, 2nd November 2001, 06:00 pm")               | [pe3.py](/src/pe3.py)| [test_pe3.py](/tests/test_pe3.py) |🟢|  
+| 4                  | [Largest palindrome product](https://projecteuler.net/problem=4 "Published on Friday, 16th November 2001, 06:00 pm")        | [pe4.py](/src/pe4.py)| [test_pe4.py](/tests/test_pe4.py) |🟢| 
+| 5                  | [Smallest multiple](https://projecteuler.net/problem=5 "Published on Friday, 30th November 2001, 06:00 pm")                 | [pe5.py](/src/pe5.py)| [test_pe5.py](/tests/test_pe5.py) |🟢| 
+| 6                  | [Sum square difference](https://projecteuler.net/problem=6 "Published on Friday, 14th December 2001, 06:00 pm")             | [pe6.py](/src/pe6.py)| [test_pe6.py](/tests/test_pe6.py) |🟢| 
+| 7                  | [10001st prime](https://projecteuler.net/problem=7 "Published on Friday, 28th December 2001, 06:00 pm")                     | [pe7.py](/src/pe7.py)| [test_pe7.py](/tests/test_pe7.py) |🟢| 
+| 8                  | [Largest product in a series](https://projecteuler.net/problem=8 "Published on Friday, 11th January 2002, 06:00 pm")        | [pe8.py](/src/pe8.py)| [test_pe8.py](/tests/test_pe8.py) |🟢|  
+| 9                  | [Special Pythagorean triplet](https://projecteuler.net/problem=9 "Published on Friday, 25th January 2002, 06:00 pm")        | [pe9.py](/src/pe9.py)| [test_pe9.py](/tests/test_pe9.py) |🟢|  
+| 10                 | [Summation of primes](https://projecteuler.net/problem=10 "Published on Friday, 8th February 2002, 06:00 pm")               | [pe10.py](/src/pe10.py)| [test_pe10.py](/tests/test_pe10.py) |🟢| 
+| 11                 | [Largest product in a grid](https://projecteuler.net/problem=11 "Published on Friday, 22nd February 2002, 06:00 pm")        | [pe11.py](/src/pe11.py)| [test_pe11.py](/tests/test_pe11.py) |🟢| 
+| 12                 | [Highly divisible triangular number](https://projecteuler.net/problem=12 "Published on Friday, 8th March 2002, 06:00 pm")   | [pe12.py](/src/pe12.py)| [test_pe12.py](/tests/test_pe12.py) |🟢|  
+| 13                 | [Large sum](https://projecteuler.net/problem=13 "Published on Friday, 22nd March 2002, 06:00 pm")                           | [pe13.py](/src/pe13.py)| [test_pe13.py](/tests/test_pe13.py) |🟢| 
+| 14                 | [Longest Collatz sequence](https://projecteuler.net/problem=14 "Published on Friday, 5th April 2002, 06:00 pm")             | [pe14.py](/src/pe14.py)| [test_pe14.py](/tests/test_pe14.py) |🟢| 
+| 15                 | [Lattice paths](https://projecteuler.net/problem=15 "Published on Friday, 19th April 2002, 06:00 pm")                       | [pe15.py](/src/pe15.py)| [test_pe15.py](/tests/test_pe15.py) |🟢| 
+| 16                 | [Power digit sum](https://projecteuler.net/problem=16 "Published on Friday, 3rd May 2002, 06:00 pm")                        | [pe16.py](/src/pe16.py)| [test_pe16.py](/tests/test_pe16.py) |🟢| | 
+| 17                 | [Number letter counts](https://projecteuler.net/problem=17 "Published on Friday, 17th May 2002, 06:00 pm")                  | [pe17.py](/src/pe17.py)| [test_pe17.py](/tests/test_pe17.py) |🟢|  
+| 18                 | [Maximum path sum I](https://projecteuler.net/problem=18 "Published on Friday, 31st May 2002, 06:00 pm")                    | [pe18.py](/src/pe18.py)| [test_pe18.py](/tests/test_pe18.py) |🟠|
+| 19                 | [Counting Sundays](https://projecteuler.net/problem=19 "Published on Friday, 14th June 2002, 06:00 pm")                     | [pe19.py](/src/pe19.py)| [test_pe19.py](/tests/test_pe19.py) |🟢|  
+| 20                 | [Factorial digit sum](https://projecteuler.net/problem=20 "Published on Friday, 21st June 2002, 06:00 pm")                  | [pe20.py](/src/pe20.py)| [test_pe20.py](/tests/test_pe20.py) |🟢|  
+| 21                 | [Amicable numbers](https://projecteuler.net/problem=21 "Published on Friday, 5th July 2002, 06:00 pm")                      | [pe21.py](/src/pe21.py)| [test_pe21.py](/tests/test_pe21.py) |🟢|  
+| 22                 | [Names scores](https://projecteuler.net/problem=22 "Published on Friday, 19th July 2002, 06:00 pm")                         | [pe22.py](/src/pe22.py)| [test_pe22.py](/tests/test_pe22.py) |🟢|  
+| 23                 | [Non-abundant sums](https://projecteuler.net/problem=23 "Published on Friday, 2nd August 2002, 06:00 pm")                   | [pe23.py](/src/pe23.py)| [test_pe23.py](/tests/test_pe23.py) |🟢| 
+| 24                 | [Lexicographic permutations](https://projecteuler.net/problem=24 "Published on Friday, 16th August 2002, 06:00 pm")         |  [pe24.py](/src/pe24.py)| [test_pe24.py](/tests/test_pe24.py) |🟢|  
+| 25                 | [1000-digit Fibonacci number](https://projecteuler.net/problem=25 "Published on Friday, 30th August 2002, 06:00 pm")        |  [pe25.py](/src/pe25.py)| [test_pe25.py](/tests/test_pe25.py) |🟢|  
+| 26                 | [Reciprocal cycles](https://projecteuler.net/problem=26 "Published on Friday, 13th September 2002, 06:00 pm")               | [pe26.py](/src/pe26.py)| [test_pe26.py](/tests/test_pe26.py) |🟢| 
+| 27                 | [Quadratic primes](https://projecteuler.net/problem=27 "Published on Friday, 27th September 2002, 06:00 pm")                | [pe27.py](/src/pe27.py)| [test_pe27.py](/tests/test_pe27.py) |🟢|  
+| 28                 | [Number spiral diagonals](https://projecteuler.net/problem=28 "Published on Friday, 11th October 2002, 06:00 pm")           | [pe28.py](/src/pe28.py)| [test_pe28.py](/tests/test_pe28.py) |🟢|  
+| 29                 | [Distinct powers](https://projecteuler.net/problem=29 "Published on Friday, 25th October 2002, 06:00 pm")                   | [pe29.py](/src/pe29.py)| [test_pe29.py](/tests/test_pe29.py) |🟠|
+| 30                 | [Digit fifth powers](https://projecteuler.net/problem=30 "Published on Friday, 8th November 2002, 06:00 pm")                | [pe30.py](/src/pe30.py)| [test_pe30.py](/tests/test_pe30.py) |🟠|
 | 31                 | [Coin sums](https://projecteuler.net/problem=31 "Published on Friday, 22nd November 2002, 06:00 pm")                        | [](/src/pe31.py)| [test_pe31.py](/tests/test_pe31.py) |
 | 32                 | [Pandigital products](https://projecteuler.net/problem=32 "Published on Friday, 6th December 2002, 06:00 pm")               | [](https://github.com/VictorCannestro/Project_Euler/blob/master/src/pe32.py)|    |
 
