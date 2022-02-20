@@ -1,23 +1,22 @@
-############################################################################################################################
-#
-# Problem 18
-#
-# By starting at the top of the triangle below and moving to adjacent numbers on the row below, the maximum 
-# total from top to bottom is 23.
-#
-#               3
-#              7 4
-#             2 4 6
-#            8 5 9 3
-#
-# That is, 3 + 7 + 4 + 9 = 23.
-#
-# Find the maximum total from top to bottom of the triangle below:
-#
-# NOTE: As there are only 16384 routes, it is possible to solve this problem by trying every route.
-#
-# Ans: 1074
-############################################################################################################################
+'''
+Problem 18
+
+By starting at the top of the triangle below and moving to adjacent numbers on the row below, the maximum 
+total from top to bottom is 23.
+
+               3
+              7 4
+             2 4 6
+            8 5 9 3
+
+That is, 3 + 7 + 4 + 9 = 23.
+
+Find the maximum total from top to bottom of the triangle below:
+
+NOTE: As there are only 16384 routes, it is possible to solve this problem by trying every route.
+
+Ans: 1074
+'''
 from functools import lru_cache
 from typing import List
 import re 
@@ -79,6 +78,7 @@ def findPathGreedy(matrix: List[List[int]]) -> List[int]:
         path.append(v)
     return path
 
+############################################################################################################################
 
 def _A179477(n: int) -> int:
     '''
@@ -148,13 +148,21 @@ def _int2list(num: int) -> List[int]:
         postprocessed += sliced 
         i += 1
     return postprocessed
-
-# The problem is traced to here for adding transitions of 2 digit integers
-def _transition(old_path, difference)-> List[int]: 
-    converted = _list2int(old_path) + difference
-    print(converted)
+ 
+            
+def _addAsHex(x: int, y: int) -> int:
+    '''Unnecessary for trees under 10 rows'''
+    h1, h2 = hex(x), hex(y)
+    return int(hex(int(h1, 16) + int(h2, 16))[2:], 16)    
+    
+# The problem is traced to here. Need to resolve the transition from one state to the next being the addition 
+# of the difference pattern, but each index_path needs to be in base 10 afterwards. 
+def _transition(old_path, difference)-> List[int]:
+    '''BRITTLE AND BUGGY'''
+    converted = _addAsHex(_list2int(old_path), difference)
     padding = len(old_path) - len(str(converted))
-    return [0]*padding + _int2list(converted) # Might need adjustment
+    result = [0]*padding + _int2list(converted) 
+    return result
 
 def bruteForce(tree: List[List[int]]) -> int:
     '''
@@ -166,15 +174,17 @@ def bruteForce(tree: List[List[int]]) -> int:
     -------
     int
         The sum of the path that generates the maximal sum, out of all 2**(n-1) paths.
+        BREAKS FOR TREES DEEPER THAN 10 ROWS CURRENTLY!!!!!!!!!!!!!
     '''
     length = len(tree)
-    differences = _diffPattern(length)         # Precompute the difference pattern
-    idx_paths = [[0 for k in range(length)]]   # Initialize the zero path
+    differences = _diffPattern(length)         # Precompute the difference pattern e.g. [1, 10, 1, 99, 1, 10, 1]
+    idx_paths = [[0 for i in range(length)]]   # Initialize the zero path: [array([0., 0., 0., 0., 0.])]
     for i in range(1, len(differences) + 1):   # Iterate 2**(n-1) - 1 times
         idx_paths.append(_transition(idx_paths[i-1], differences[i-1]))
-    paths = [list(map(lambda row, idx: row[idx], tree, idx_paths[i])) for i in range(len(idx_paths))] # Map from the idx_paths to the corresponding path of tree values
+    paths = [list(map(lambda row, idx: row[idx], tree, idx_paths[i])) for i in range(len(idx_paths))] 
     return max(sum(path) for path in paths)
     
+############################################################################################################################
 
 def findPathDynamic(matrix: List[List[int]]) -> List[int]:
     '''
