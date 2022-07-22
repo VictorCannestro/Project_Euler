@@ -14,21 +14,16 @@ and 2 ≤ b ≤ 100?
 Ans: 9183
 '''
 import numpy as np
+from typing import Tuple
 
 
-def findCombos(bases: np.array, powers: np.array) -> set:
+Range = Tuple[int, int] # List[int, int] is unsupported however for Python 3.9+ we can do list[int, int]
+
+
+def find_combos(bases: np.array, powers: np.array) -> set:
     '''
-    Parameters
-    ----------
-    bases : np.array
-        The array of bases to consider.
-    powers : np.array
-        The array of powers to raise the bases to.
-    Returns
-    -------
-    set
-        Set of distinct terms with bases a and powers b corresponding
-        to the equation a**b.
+    QA investigation found that an input of findCombos(np.arange(2,10+1), np.arange(2,10+1))
+    returns a set containing -808182895 which is an error.
     '''
     combos = set([])
     for i in bases:
@@ -36,5 +31,45 @@ def findCombos(bases: np.array, powers: np.array) -> set:
     return combos
 
 
+def generate_combinations(a_range: Range, b_range: Range) -> set:
+    '''
+    Parameters
+    ----------
+    a_range : Range
+         The min and max (inclusive) values of bases to consider.
+    b_range : Range
+        The min and max (inclusive) values of powers to consider.
+
+    Raises
+    ------
+    TypeError
+        If input is not a valid Tuple[int, int].
+    ValueError
+        If input contains value outside of allowed bounds of [2, 100].
+
+    Returns
+    -------
+    set
+        Set of distinct terms with bases a and powers b corresponding
+        to the equation a**b.
+    '''
+    if sum(type(element)!=int for element in a_range + b_range):
+        raise TypeError("Function only accepts lists of two integers as inputs.")
+    elif sum((element > 100 or element < 2) for element in a_range + b_range):
+        raise ValueError("Input contains value outside of allowed bounds of [2, 100].")
+    combos = set()
+    a1, a2 = a_range
+    b1, b2 = b_range
+    for a in range(a1, a2+1):
+        for b in range(b1, b2+1):
+            combos.update([a**b])
+    return combos
+
+    
+def number_of_distinct_terms(combos: set) -> int:
+    return len(list(combos))
+
+
 if __name__ == "__main__":
-    print(len(findCombos(np.arange(2,100+1), np.arange(2,100+1))))
+    result = generate_combinations([2, 100], [2, 100])
+    print(number_of_distinct_terms(result))
