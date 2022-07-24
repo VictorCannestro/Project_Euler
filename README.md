@@ -46,7 +46,7 @@
 | 27                 | [Quadratic primes](https://projecteuler.net/problem=27 "Published on Friday, 27th September 2002, 06:00 pm")                | [pe27.py](/src/pe27.py)| [test_pe27.py](/tests/test_pe27.py) |🟢|  
 | 28                 | [Number spiral diagonals](https://projecteuler.net/problem=28 "Published on Friday, 11th October 2002, 06:00 pm")           | [pe28.py](/src/pe28.py)| [test_pe28.py](/tests/test_pe28.py) |🟢|  
 | 29                 | [Distinct powers](https://projecteuler.net/problem=29 "Published on Friday, 25th October 2002, 06:00 pm")                   | [pe29.py](/src/pe29.py)| [test_pe29.py](/tests/test_pe29.py) |🟢|
-| 30                 | [Digit fifth powers](https://projecteuler.net/problem=30 "Published on Friday, 8th November 2002, 06:00 pm")                | [pe30.py](/src/pe30.py)| [test_pe30.py](/tests/test_pe30.py) |🟠|
+| 30                 | [Digit fifth powers](https://projecteuler.net/problem=30 "Published on Friday, 8th November 2002, 06:00 pm")                | [pe30.py](/src/pe30.py)| [test_pe30.py](/tests/test_pe30.py) |🟢|
 | 31                 | [Coin sums](https://projecteuler.net/problem=31 "Published on Friday, 22nd November 2002, 06:00 pm")                        | [](/src/pe31.py)| [test_pe31.py](/tests/test_pe31.py) |
 | 32                 | [Pandigital products](https://projecteuler.net/problem=32 "Published on Friday, 6th December 2002, 06:00 pm")               | [](https://github.com/VictorCannestro/Project_Euler/blob/master/src/pe32.py)|    |
 
