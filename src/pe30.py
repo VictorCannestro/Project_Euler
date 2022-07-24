@@ -9,6 +9,7 @@
 # 1634 = 1**4 + 6**4 + 3**4 + 4**4
 # 8208 = 8**4 + 2**4 + 0**4 + 8**4
 # 9474 = 9**4 + 4**4 + 7**4 + 4**4
+
 # As 1 = 1**4 is not a sum it is not included.
 #
 # The sum of these numbers is 1634 + 8208 + 9474 = 19316.
@@ -21,11 +22,12 @@
 
 import numpy as np
 
+
 def digits(x):
     '''Returns a list of the digits of x'''
     return np.array([int(i) for i in str(x)])
 
-def findPowers(n):
+def find_digit_sums_of_nth_powers(n: int) -> set:
     '''
     Args:
         n (int): the power to raise to
@@ -35,15 +37,19 @@ def findPowers(n):
                           as the sum of nth powers of 
                           their digits
     '''
+    if not type(n) == int:
+        raise TypeError("Function only accepts one integer as an input.")
+    elif n > 5 or n < 0:
+        raise ValueError("Input contains value outside of allowed bounds of [0, 5].")    
     nth_powres = set([])
-    lim = 10000
-    for i in range(2, lim):
+    lim = 500000            # TODO: Need to programatically find the upperbound
+    for i in range(0, lim): # To not include 0 or 1 in the set just set the lower range to 2
         ds = digits(i)
         if np.sum(np.power(ds, n)) == i:
             nth_powres.update([i])
     return nth_powres
 
 if __name__ == "__main__":
-    calc = findPowers(5)
+    calc = find_digit_sums_of_nth_powers(3)
     print(calc)
     print(sum(calc))
