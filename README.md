@@ -34,7 +34,7 @@
 | 15                 | [Lattice paths](https://projecteuler.net/problem=15 "Published on Friday, 19th April 2002, 06:00 pm")                       | [pe15.py](/src/pe15.py)| [test_pe15.py](/tests/test_pe15.py) |🟢| 
 | 16                 | [Power digit sum](https://projecteuler.net/problem=16 "Published on Friday, 3rd May 2002, 06:00 pm")                        | [pe16.py](/src/pe16.py)| [test_pe16.py](/tests/test_pe16.py) |🟢| | 
 | 17                 | [Number letter counts](https://projecteuler.net/problem=17 "Published on Friday, 17th May 2002, 06:00 pm")                  | [pe17.py](/src/pe17.py)| [test_pe17.py](/tests/test_pe17.py) |🟢|  
-| 18                 | [Maximum path sum I](https://projecteuler.net/problem=18 "Published on Friday, 31st May 2002, 06:00 pm")                    | [pe18.py](/src/pe18.py)| [test_pe18.py](/tests/test_pe18.py) |🟠|
+| 18                 | [Maximum path sum I](https://projecteuler.net/problem=18 "Published on Friday, 31st May 2002, 06:00 pm")                    | [pe18.py](/src/pe18.py)| [test_pe18.py](/tests/test_pe18.py) |🟢|
 | 19                 | [Counting Sundays](https://projecteuler.net/problem=19 "Published on Friday, 14th June 2002, 06:00 pm")                     | [pe19.py](/src/pe19.py)| [test_pe19.py](/tests/test_pe19.py) |🟢|  
 | 20                 | [Factorial digit sum](https://projecteuler.net/problem=20 "Published on Friday, 21st June 2002, 06:00 pm")                  | [pe20.py](/src/pe20.py)| [test_pe20.py](/tests/test_pe20.py) |🟢|  
 | 21                 | [Amicable numbers](https://projecteuler.net/problem=21 "Published on Friday, 5th July 2002, 06:00 pm")                      | [pe21.py](/src/pe21.py)| [test_pe21.py](/tests/test_pe21.py) |🟢|  
