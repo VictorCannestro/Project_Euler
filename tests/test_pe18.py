@@ -1,5 +1,5 @@
-from src.pe18 import str2List, str2IntElements
-from src.pe18 import bottomsUp
+from src.pe18 import str2List, str2IntElements, generateIndicesOfPaths, bruteForce
+import pytest
 
 
 class TestStr2List(object):
@@ -7,8 +7,7 @@ class TestStr2List(object):
         tri = '''3\n7 4\n2 4 6\n8 5 9 3'''
         calc = str2List(tri)
         ans = [["3"],["7","4"],["2","4","6"],["8","5","9","3"]]
-        message = f"Expected {ans}\nGot {calc}"
-        assert calc == ans, message
+        assert calc == ans, f"Expected {ans}\nGot {calc}"
     
     def test_slice(self):
         tri = '''75
@@ -16,8 +15,7 @@ class TestStr2List(object):
     17 47 82'''
         calc = str2List(tri)
         ans = [["75"],["95","64"],["17","47","82"]]
-        message = f"Expected {ans}\nGot {calc}"
-        assert calc == ans, message
+        assert calc == ans, f"Expected {ans}\nGot {calc}"
     
     
 class TestStr2IntElements(object):
@@ -25,16 +23,47 @@ class TestStr2IntElements(object):
         collection = [["3"],["7","4"],["2","4","6"],["8","5","9","3"]]
         calc = str2IntElements(collection)
         ans = [[3],[7,4],[2,4,6],[8,5,9,3]]
-        message = f"Expected {ans}\nGot {calc}"
-        assert calc == ans, message
+        assert calc == ans, f"Expected {ans}\nGot {calc}"
 
+
+class TestGenerateIndicesOfPaths(object):
+    test_data = [1, 2, 3, 4]
+    
+    test_expectations = [[[0]],            
+                         
+                         [[0, 0],
+                          [0, 1]],      
+                         
+                         [[0, 0, 0],
+                          [0, 0, 1],
+                          [0, 1, 1],
+                          [0, 1, 2]],   
+                         
+                         [[0, 0, 0, 0],
+                          [0, 0, 0, 1],
+                          [0, 0, 1, 1],
+                          [0, 0, 1, 2],
+                          [0, 1, 1, 1],
+                          [0, 1, 1, 2],
+                          [0, 1, 2, 2],
+                          [0, 1, 2, 3]]]
+    
+    test_ids = ["1_row_1_path",
+                "2_rows_2_paths",
+                "3_rows_4_paths",
+                "4_rows_8_paths"]
+    
+    @pytest.mark.parametrize("n, ans", zip(test_data, test_expectations), ids=test_ids)
+    def test_generateIndicesOfPaths(self, n, ans):
+        calc = generateIndicesOfPaths(n)
+        assert calc == ans, f"Expected {ans}\nGot {calc}"    
+        
       
 class TestBruteForce(object):
     def test_given(self):
-        calc = bottomsUp([[3],[7,4],[2,4,6],[8,5,9,3]])
+        calc = bruteForce([[3],[7,4],[2,4,6],[8,5,9,3]])
         ans = sum([3,7,4,9])
-        message = f"Expected {ans}\nGot {calc}"
-        assert calc == ans, message    
+        assert calc == ans, f"Expected {ans}\nGot {calc}"    
             
     def test_answer(self):
         tri = '''75
@@ -52,7 +81,6 @@ class TestBruteForce(object):
     91 71 52 38 17 14 91 43 58 50 27 29 48
     63 66 04 68 89 53 67 30 73 16 69 87 40 31
     04 62 98 27 23 09 70 98 73 93 38 53 60 04 23'''
-        calc = bottomsUp(str2IntElements(str2List(tri)))
+        calc = bruteForce(str2IntElements(str2List(tri)))
         ans = 1074
-        message = f"Expected {ans}\nGot {calc}"
-        assert calc == ans, message 
+        assert calc == ans, f"Expected {ans}\nGot {calc}" 
